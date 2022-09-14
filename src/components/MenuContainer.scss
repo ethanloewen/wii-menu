@@ -1,4 +1,4 @@
-$hudheight: 100px;
+$hudheight: 25%;
 
 #menu-main {
     width: 100%;
@@ -27,7 +27,7 @@ $hudheight: 100px;
                 
 
                 .panel-container {
-                    
+                    z-index: 2;
                     height: inherit;
                     width: inherit;
                     display: flex;
@@ -38,20 +38,17 @@ $hudheight: 100px;
                         position: relative;
                         display: flex;
                         flex-direction: column;
-                        // align-items: center;
                         justify-content: space-between;
                         width: 80%;
                         height: 60%;
                         margin-top: -10%; // offset panels to match wii layout
-                        border: 1px solid red;
+                        // border: 1px solid red;
 
                         .p-row {
                             position: relative;
                             width: 100%;
                             height: 94%;
-                            // background-color: green;
                             display: flex;
-                            
                             justify-content: space-between;
 
                             .panel {
@@ -62,11 +59,16 @@ $hudheight: 100px;
                                 background-color: rgb(232, 232, 232);
                                 border: 0.3rem solid grey;
                             }
+
+                            .panel:hover {
+                                border: 0.3rem solid rgb(31, 206, 255);
+                            }
                         }                        
                     }
                 }
 
                 .hud-container {
+                    z-index: 1;
                     height: inherit;
                     width: inherit;
                     position: absolute;
@@ -74,9 +76,28 @@ $hudheight: 100px;
                     .hud {
                         width: 100%;
                         height: $hudheight;
-                        background-color: red;
+                        background-color: rgb(196, 196, 196);
                         position: relative;
                         top: calc(100% - $hudheight);
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        
+
+                        .hud-button {
+                            position: relative;
+                            width: 8%;
+                            height: 0;
+                            padding-bottom: 8%;
+                            border-radius: 50%;
+                            margin-left: 5%;
+                            background-color: rgb(227, 227, 227);
+                            border: 0.3rem solid rgb(31, 206, 255);
+                        }
+
+                        .hud-button:nth-of-type(2) {
+                            margin-right: 5%;
+                        }
                     }
                 }                
             }

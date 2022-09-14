@@ -32,7 +32,9 @@ function MenuContainer() {
 
                     <div className='hud-container'>
                         <div className='hud'>
-
+                            <div className='hud-button'></div>
+                            <div className='hud-button'></div>
+                            
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,19 @@
 .App {
   margin: 0;
   padding: 0;
+  cursor: none;
+}
+
+#pointer {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+}
+
+img {
+  width: 150px;
+  height: auto;
+  position: relative;
+  top: -70px;
+  left: -70px;
 }
