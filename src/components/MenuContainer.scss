@@ -83,21 +83,65 @@ $hudheight: 25%;
                         justify-content: space-between;
                         align-items: center;
                         
-
-                        .hud-button {
+                        // left side hud-ring
+                        .hud-ring {
                             position: relative;
-                            width: 8%;
+                            width: 15%;
                             height: 0;
+                            margin-top: -2%;
+                            // height: 0;
                             padding-bottom: 8%;
-                            border-radius: 50%;
-                            margin-left: 5%;
+                            // border-radius: 50%;
+                            // margin-left: 5%;
                             background-color: rgb(227, 227, 227);
-                            border: 0.3rem solid rgb(31, 206, 255);
+                            border-top: 0.3rem solid rgb(171, 171, 171);
+                            border-right: 0.3rem solid rgb(171, 171, 171);
+                            border-bottom: 0.3rem solid rgb(171, 171, 171);
+                            z-index: 1;
+
+                            // border-top-right-radius: 20%;
+                            // border-bottom-right-radius: 20%;
+                            // padding-right: 20px;
+
+                            // box-shadow: 5px 10px #888888;
+
+                            // display: flex;
+                            // align-items: center;
+                            // justify-content: flex-end;
+
+                            .hud-cap {
+                                position: absolute;
+                                width: 55%;
+                                padding-bottom: 55%;
+                                margin-top: -1.5%;
+                                margin-left: 75%;
+                                // margin-top: 16%;
+                                height: 0;
+                                border-radius: 50%;
+                                background-color: rgb(227, 227, 227);
+                                border: 0.3rem solid rgb(171, 171, 171);
+
+                            }
+
+                            #right-cap {
+                                margin-left: -25%;
+                            }
+
+                            
                         }
 
-                        .hud-button:nth-of-type(2) {
-                            margin-right: 5%;
+                        // right side hud-ring
+                        .hud-ring:nth-of-type(2) {
+                            border-right: none;
+                            border-left: 0.3rem solid rgb(31, 206, 255);
+                            justify-content: flex-start;
                         }
+
+                        
+
+                        
+
+                        
                     }
                 }                
             }
