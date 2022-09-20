@@ -83,59 +83,67 @@ $hudheight: 25%;
                         justify-content: space-between;
                         align-items: center;
                         
-                        // left side hud-ring
-                        .hud-ring {
+                        #right-cap {
+                            margin-left: 0;
+                            margin-right: 6%;
+
+                            #right-ring {
+                                margin-left: 0;
+                                margin-left: 52.5%;
+                                // border: 1px solid red;
+                            }
+                        }
+
+                        .hud-cap {
                             position: relative;
-                            width: 15%;
-                            height: 0;
-                            margin-top: -2%;
-                            // height: 0;
+                            width: 8%;
                             padding-bottom: 8%;
-                            // border-radius: 50%;
-                            // margin-left: 5%;
+                            margin-top: -1%;
+                            margin-left: 6%;
+                            // margin-top: 2.5%;
+                            height: 0;
+                            border-radius: 50%;
                             background-color: rgb(227, 227, 227);
-                            border-top: 0.3rem solid rgb(171, 171, 171);
-                            border-right: 0.3rem solid rgb(171, 171, 171);
-                            border-bottom: 0.3rem solid rgb(171, 171, 171);
-                            z-index: 1;
+                            border: 0.3rem solid rgb(171, 171, 171);
 
-                            // border-top-right-radius: 20%;
-                            // border-bottom-right-radius: 20%;
-                            // padding-right: 20px;
-
-                            // box-shadow: 5px 10px #888888;
-
-                            // display: flex;
-                            // align-items: center;
-                            // justify-content: flex-end;
-
-                            .hud-cap {
-                                position: absolute;
-                                width: 55%;
-                                padding-bottom: 55%;
-                                margin-top: -1.5%;
-                                margin-left: 75%;
-                                // margin-top: 16%;
-                                height: 0;
+                            .hud-button {
+                                width: 92%;
+                                height: 92%;
                                 border-radius: 50%;
                                 background-color: rgb(227, 227, 227);
-                                border: 0.3rem solid rgb(171, 171, 171);
-
+                                border: 0.3rem solid rgb(12, 213, 249);
+                                z-index: 5;
                             }
 
-                            #right-cap {
-                                margin-left: -25%;
+                            // left side hud-ring
+
+                            .hud-ring {
+                                position: absolute;
+                                // left: -77.5%;
+                                margin-left: -77.5%;
+                                width: 125%;
+                                height: 0;
+                                margin-top: -2%;
+                                padding-bottom: 100%;
+                                background-color: rgb(227, 227, 227);
+                                border-top: 0.3rem solid rgb(171, 171, 171);
+                                border-bottom: 0.3rem solid rgb(171, 171, 171);
+                                z-index: 1;
+
+                                
                             }
 
-                            
                         }
+                        
+                        
+                        
 
-                        // right side hud-ring
-                        .hud-ring:nth-of-type(2) {
-                            border-right: none;
-                            border-left: 0.3rem solid rgb(31, 206, 255);
-                            justify-content: flex-start;
-                        }
+                        // // right side hud-ring
+                        // .hud-ring:nth-of-type(2) {
+                        //     border-right: none;
+                        //     border-left: 0.3rem solid rgb(31, 206, 255);
+                        //     justify-content: flex-start;
+                        // }
 
                         
 

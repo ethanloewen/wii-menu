@@ -32,15 +32,14 @@ function MenuContainer() {
 
                     <div className='hud-container'>
                         <div className='hud'>
-                            <div className='hud-ring'>
-                                <div className='hud-cap' id='left-cap'>
-                                    <div className='hud-button'></div>
-                                </div>
+                            <div className='hud-cap' id='left-cap'>
+                                <div className='hud-button'></div>
+                                <div className='hud-ring'></div>
                             </div>
-                            <div className='hud-ring'>
-                                <div className='hud-cap' id='right-cap'>
-                                    <div className='hud-button'></div>
-                                </div>
+
+                            <div className='hud-cap' id='right-cap'>
+                                <div className='hud-button'></div>
+                                <div className='hud-ring' id='right-ring'></div>
                             </div>
                         </div>
                     </div>
