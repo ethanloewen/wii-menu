@@ -53,6 +53,7 @@ $hudheight: 25%;
 
                             .panel {
                                 position: relative;
+                                z-index: 10;
                                 height: inherit;
                                 width: 24%;
                                 border-radius: 15px;
@@ -72,6 +73,7 @@ $hudheight: 25%;
                     height: inherit;
                     width: inherit;
                     position: absolute;
+                    display: flex;
                     
                     .hud {
                         width: 100%;
@@ -106,6 +108,8 @@ $hudheight: 25%;
                             background-color: rgb(227, 227, 227);
                             border: 0.3rem solid rgb(171, 171, 171);
 
+                            
+
                             .hud-button {
                                 width: 92%;
                                 height: 92%;
@@ -113,6 +117,8 @@ $hudheight: 25%;
                                 background-color: rgb(227, 227, 227);
                                 border: 0.3rem solid rgb(12, 213, 249);
                                 z-index: 5;
+
+                                
                             }
 
                             // left side hud-ring
@@ -129,6 +135,8 @@ $hudheight: 25%;
                                 border-top: 0.3rem solid rgb(171, 171, 171);
                                 border-bottom: 0.3rem solid rgb(171, 171, 171);
                                 z-index: 1;
+
+                                
 
                                 
                             }
@@ -154,6 +162,54 @@ $hudheight: 25%;
                 }                
             }
         }
+    }
+}
+
+// note parent div has {display: flex};
+#clock {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+    .clock-main {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; //16:9 aspect ratio
+        height: 0;
+        border: 1px solid rgb(77, 110, 233);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        z-index: 50;
+
+        #time {
+            margin-top: 56.25%;//accounts for main using padding-bottom instead of height
+            border: 1px solid red;
+            font-size: 6rem;
+        }
+
+        #date {
+            font-size: 5rem;
+        }
+
+        // .time {
+        //     position: relative;
+        //     height: 50%;
+        //     width: 100%;
+        //     border: 1px solid magenta;
+        // }
+        // .date {
+        //     position: relative;
+        //     height: 30%;
+        //     width: 100%;
+        // }
     }
 }
 
