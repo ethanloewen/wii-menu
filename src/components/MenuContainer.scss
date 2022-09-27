@@ -177,26 +177,29 @@ $hudheight: 25%;
     // align-items: center;
 
     .clock-main {
-        position: relative;
+        position: absoulte;
         width: 100%;
         padding-bottom: 56.25%; //16:9 aspect ratio
+        // margin-top: -56.25%;
         height: 0;
-        border: 1px solid rgb(77, 110, 233);
+        border: 5px solid rgb(77, 110, 233);
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        // justify-content: center;
         align-items: center;
+        
 
         z-index: 50;
 
         #time {
-            margin-top: 56.25%;//accounts for main using padding-bottom instead of height
+            margin-top: 40%;//accounts for main using padding-bottom instead of height
             border: 1px solid red;
             font-size: 6rem;
         }
 
         #date {
             font-size: 5rem;
+            border: 1px solid red;
         }
 
         // .time {
