@@ -1,5 +1,22 @@
 $hudheight: 25%;
 
+// --- ANIMATIONS ---
+@keyframes panel-zoom {
+    from {width: 24%;}
+    to {width: 100%;}
+}
+
+// .panel {
+//     position: relative;
+//     z-index: 10;
+//     height: inherit;
+//     width: 24%;
+//     border-radius: 15px;
+//     background-color: rgb(232, 232, 232);
+//     border: 0.3rem solid grey;
+// }
+
+
 #menu-main {
     width: 100%;
     height: 100vh;
@@ -51,6 +68,8 @@ $hudheight: 25%;
                             display: flex;
                             justify-content: space-between;
 
+                            
+
                             .panel {
                                 position: relative;
                                 z-index: 10;
@@ -63,6 +82,13 @@ $hudheight: 25%;
 
                             .panel:hover {
                                 border: 0.3rem solid rgb(31, 206, 255);
+                            }
+
+                            // element that will be animated
+                            #panel-zoom {
+                                animation-name: panel-zoom;
+                                animation-duration: 4s;
+                                
                             }
                         }                        
                     }
@@ -192,12 +218,15 @@ $hudheight: 25%;
         z-index: 50;
 
         #time {
+            margin: 0;
             margin-top: 40%;//accounts for main using padding-bottom instead of height
             border: 1px solid red;
             font-size: 6rem;
         }
 
         #date {
+            margin: 0;
+            margin-top: 3%;
             font-size: 5rem;
             border: 1px solid red;
         }
@@ -215,6 +244,9 @@ $hudheight: 25%;
         // }
     }
 }
+
+
+
 
 
 

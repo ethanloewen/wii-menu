@@ -1,6 +1,21 @@
 import './MenuContainer.scss';
+import { useEffect } from 'react';
+import $ from "jquery";
+
+
+
+
 
 function MenuContainer() {
+
+  const addId = (e) => {
+    console.log(e.target.id);
+    // const targetDiv = $(`${e.target.id}`);
+    // targetDiv.id = 'panel-zoom';
+    // console.log(targetDiv.id);
+    $(`#${e.target.id}`).attr('id', 'panel-zoom');
+  };
+
   return (
     <section id='menu-main'>
       <div className='menu-main-container'>
@@ -8,24 +23,24 @@ function MenuContainer() {
           <div>
             <div className='panel-container'>
 
-              <div className='panels'>
+              <div className='panels' onClick={(e) => {addId(e)}}>
                 <div className='p-row'>
-                  <div className='panel'></div>
-                  <div className='panel'></div>
-                  <div className='panel'></div>
-                  <div className='panel'></div>
+                  <div className='panel' id='panel-1' ></div>
+                  <div className='panel' id='panel-2'></div>
+                  <div className='panel' id='panel-3'></div>
+                  <div className='panel' id='panel-4'></div>
                 </div>
                 <div className='p-row'>
-                  <div className='panel'></div>
-                  <div className='panel'></div>
-                  <div className='panel'></div>
-                  <div className='panel'></div>
+                  <div className='panel' id='panel-5'></div>
+                  <div className='panel' id='panel-6'></div>
+                  <div className='panel' id='panel-7'></div>
+                  <div className='panel' id='panel-8'></div>
                 </div>
                 <div className='p-row'>
-                  <div className='panel'></div>
-                  <div className='panel'></div>
-                  <div className='panel'></div>
-                  <div className='panel'></div>
+                  <div className='panel' id='panel-9'></div>
+                  <div className='panel' id='panel-10'></div>
+                  <div className='panel' id='panel-11'></div>
+                  <div className='panel' id='panel-12'></div>
                 </div>
               </div>
             </div>
