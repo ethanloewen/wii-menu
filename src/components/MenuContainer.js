@@ -1,4 +1,5 @@
 import './MenuContainer.scss';
+import Fullscreen from './Fullscreen';
 import { useEffect } from 'react';
 import $ from "jquery";
 
@@ -22,7 +23,8 @@ function MenuContainer() {
         <div className='stretchy-wrapper'>
           <div>
 
-            <div className='fullscreen'></div>
+            {/* <div className='fullscreen'></div> */}
+            <Fullscreen />
 
             <div className='panel-container'>
 
