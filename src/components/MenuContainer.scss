@@ -41,6 +41,13 @@ $hudheight: 25%;
                 display: flex;
                 // justify-content: center;
                 // align-items: center;
+
+                .fullscreen {
+                    height: 100%;
+                    width: 100%;
+                    border: 2px solid red;
+                    background-color: aquamarine;
+                }
                 
 
                 .panel-container {

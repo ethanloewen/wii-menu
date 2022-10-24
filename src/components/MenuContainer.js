@@ -21,6 +21,9 @@ function MenuContainer() {
       <div className='menu-main-container'>
         <div className='stretchy-wrapper'>
           <div>
+
+            <div className='fullscreen'></div>
+
             <div className='panel-container'>
 
               <div className='panels' onClick={(e) => {addId(e)}}>
