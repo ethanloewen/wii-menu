@@ -11,10 +11,10 @@ function MenuContainer() {
 
   const addId = (e) => {
     console.log(e.target.id);
-    // const targetDiv = $(`${e.target.id}`);
-    // targetDiv.id = 'panel-zoom';
-    // console.log(targetDiv.id);
     $(`#${e.target.id}`).attr('id', 'panel-zoom');
+
+    // $(`.anim-panel`).css('animation', 'panel-fullscreen 2s');
+
   };
 
   return (
@@ -27,7 +27,6 @@ function MenuContainer() {
             <Fullscreen />
 
             <div className='panel-container'>
-
               <div className='panels' onClick={(e) => {addId(e)}}>
                 <div className='p-row'>
                   <div className='panel' id='panel-1' ></div>
