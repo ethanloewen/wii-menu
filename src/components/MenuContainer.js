@@ -14,7 +14,8 @@ function MenuContainer() {
     // $(`#${e.target.id}`).attr('id', 'panel-zoom');
 
     $(`.anim-panel`).css('animation', 'panel-fullscreen 2s forwards');
-    $(`.panels`).css('display', 'none');
+    $(`.panel-container`).css('display', 'none');
+    $(`.hud-container`).css('display', 'none');
 
   };
 
