@@ -1,0 +1,24 @@
+@keyframes panel-fullscreen {
+    from {
+        height: 19.5%;
+        width: 19.6%;
+        margin-left: 10%;
+        margin-top: 6.2%;
+    }
+    to {
+        width: 96%;
+        height: 90%;
+        margin-left: 2%;
+        margin-top: 3%;
+    }
+}
+
+@keyframes panel-zoom {
+    from {width: 24%;}
+    to {width: 100%;}
+}
+
+@keyframes fade-to-black {
+    from {}
+    to {background-color: black;}
+}

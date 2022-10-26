@@ -1,15 +1,7 @@
+@import '../animations/animations';
+
 $hudheight: 25%;
 
-// --- ANIMATIONS ---
-@keyframes panel-zoom {
-    from {width: 24%;}
-    to {width: 100%;}
-}
-
-@keyframes fade-to-black {
-    from {}
-    to {background-color: black;}
-}
 
 
 #menu-main {

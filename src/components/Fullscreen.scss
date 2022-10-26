@@ -1,18 +1,4 @@
-// --- ANIMATIONS ---
-@keyframes panel-fullscreen {
-    from {
-        height: 19.5%;
-        width: 19.6%;
-        margin-left: 10%;
-        margin-top: 6.2%;
-    }
-    to {
-        width: 96%;
-        height: 90%;
-        margin-left: 2%;
-        margin-top: 3%;
-    }
-}
+@import '../animations/animations';
 
 #fullscreen-main {
     pointer-events: none;
