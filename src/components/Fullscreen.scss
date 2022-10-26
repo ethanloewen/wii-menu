@@ -18,14 +18,14 @@
     pointer-events: none;
     height: 100%;
     width: 100%;
-    background-color: rgba(28, 28, 28, 0.172);
+    background-color: none;
     z-index: 100;
     position: relative;
 
     .anim-panel {
         position: absolute;
         border-radius: 15px;
-        background-color: rgba(115, 210, 210, 0.759);
+        background-color: rgba(216, 216, 216, 0.695);
 
         // animation: panel-fullscreen 2s;
 

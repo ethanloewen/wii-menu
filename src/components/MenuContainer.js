@@ -13,7 +13,8 @@ function MenuContainer() {
     console.log(e.target.id);
     // $(`#${e.target.id}`).attr('id', 'panel-zoom');
 
-    $(`.anim-panel`).css('animation', 'panel-fullscreen 2s');
+    $(`.anim-panel`).css('animation', 'panel-fullscreen 2s forwards');
+    $(`.panels`).css('display', 'none');
 
   };
 
