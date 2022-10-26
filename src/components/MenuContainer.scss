@@ -6,15 +6,10 @@ $hudheight: 25%;
     to {width: 100%;}
 }
 
-// .panel {
-//     position: relative;
-//     z-index: 10;
-//     height: inherit;
-//     width: 24%;
-//     border-radius: 15px;
-//     background-color: rgb(232, 232, 232);
-//     border: 0.3rem solid grey;
-// }
+@keyframes fade-to-black {
+    from {}
+    to {background-color: black;}
+}
 
 
 #menu-main {

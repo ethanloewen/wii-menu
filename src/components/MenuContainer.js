@@ -16,6 +16,7 @@ function MenuContainer() {
     $(`.anim-panel`).css('animation', 'panel-fullscreen 2s forwards');
     $(`.panel-container`).css('display', 'none');
     $(`.hud-container`).css('display', 'none');
+    $(`.stretchy-wrapper`).css('animation', 'fade-to-black 2s forwards');
 
   };
 
