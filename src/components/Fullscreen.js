@@ -9,7 +9,10 @@ function Fullscreen() {
   return (
     <div id='fullscreen-main'>
       <div className='anim-panel'>
-        <div className='button-panel'></div>
+        <div className='buttons'>
+          <button>Wii Menu</button>
+          <button>Start</button>
+        </div>
       </div>
     </div>
   );
