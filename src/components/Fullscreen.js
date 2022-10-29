@@ -12,8 +12,8 @@ function Fullscreen(props) {
           <div className='anim-panel'>
             <div className='buttons-container'>
               <div className='buttons'>
-                <button>Wii Menu</button>
-                <button>Start</button>
+                <button id='menu-button'>Wii Menu</button>
+                <button id='start-button'>Start</button>
               </div>
             </div>
           </div>

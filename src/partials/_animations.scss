@@ -22,3 +22,9 @@
     from {}
     to {background-color: black;}
 }
+
+@keyframes text-zoom {
+    0% {font-size: 0px;}
+    10% {font-size: 0.5rem;}
+    90% {font-size: 3rem;}
+}

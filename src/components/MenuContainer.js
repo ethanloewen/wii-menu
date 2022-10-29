@@ -21,6 +21,7 @@ function MenuContainer() {
       $(`.panel-container`).css('display', 'none');
       $(`.hud-container`).css('display', 'none');
       $(`.stretchy-wrapper`).css('animation', 'fade-to-black 2s forwards');
+      $(`.buttons button`).css('animation', 'text-zoom 2s forwards');
     }, 10);
 
     
