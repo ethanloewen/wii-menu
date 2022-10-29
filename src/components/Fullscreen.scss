@@ -2,6 +2,7 @@
 @import '../partials/variables';
 
 #fullscreen-main {
+    // display: none !important;
     pointer-events: none;
     height: 100%;
     width: 100%;
