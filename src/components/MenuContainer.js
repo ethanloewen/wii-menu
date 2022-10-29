@@ -1,23 +1,29 @@
 import './MenuContainer.scss';
 import Fullscreen from './Fullscreen';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import $ from "jquery";
 
 
 
-
-
 function MenuContainer() {
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   const addId = (e) => {
     console.log(e.target.id);
     // $(`#${e.target.id}`).attr('id', 'panel-zoom');
 
     // $(`#fullscreen-main`).css('display', 'block !important');
-    $(`.anim-panel`).css('animation', 'panel-fullscreen 2s forwards');
-    $(`.panel-container`).css('display', 'none');
-    $(`.hud-container`).css('display', 'none');
-    $(`.stretchy-wrapper`).css('animation', 'fade-to-black 2s forwards');
+    setIsFullscreen(true);
+
+    // small timeout required to make the animation work properly
+    setTimeout(() => {
+      $(`.anim-panel`).css('animation', 'panel-fullscreen 2s forwards');
+      $(`.panel-container`).css('display', 'none');
+      $(`.hud-container`).css('display', 'none');
+      $(`.stretchy-wrapper`).css('animation', 'fade-to-black 2s forwards');
+    }, 10);
+
+    
     
 
   };
@@ -28,8 +34,7 @@ function MenuContainer() {
         <div className='stretchy-wrapper'>
           <div>
 
-            {/* <div className='fullscreen'></div> */}
-            <Fullscreen />
+            <Fullscreen isFullscreen={isFullscreen} />
 
             <div className='panel-container'>
               <div className='panels' onClick={(e) => {addId(e)}}>
