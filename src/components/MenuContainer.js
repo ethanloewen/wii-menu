@@ -8,7 +8,7 @@ import $ from "jquery";
 function MenuContainer() {
   const [isFullscreen, setIsFullscreen] = useState(false);
 
-  const addId = (e) => {
+  const growPanel = (e) => {
     console.log(e.target.id);
     // $(`#${e.target.id}`).attr('id', 'panel-zoom');
 
@@ -17,16 +17,24 @@ function MenuContainer() {
 
     // small timeout required to make the animation work properly
     setTimeout(() => {
-      $(`.anim-panel`).css('animation', 'panel-fullscreen 2s forwards');
+      $(`.anim-panel`).css('animation', 'panel-fullscreen 1.5s forwards');
       $(`.panel-container`).css('display', 'none');
       $(`.hud-container`).css('display', 'none');
-      $(`.stretchy-wrapper`).css('animation', 'fade-to-black 2s forwards');
-      $(`.buttons button`).css('animation', 'text-zoom 2s forwards');
+      $(`.stretchy-wrapper`).css('animation', 'fade-to-black 1.5s forwards');
+      $(`.buttons button`).css('animation', 'text-zoom 1.5s forwards');
     }, 10);
 
-    
-    
+  };
 
+  const shrinkPanel = (e) => {
+    // small timeout required to make the animation work properly
+    setTimeout(() => {
+      $(`.anim-panel`).css('animation', 'panel-shrink 1.5s forwards');
+      $(`.panel-container`).css('display', 'flex');
+      $(`.hud-container`).css('display', 'flex');
+      $(`.stretchy-wrapper`).css('animation', 'fade-to-black 1.5s reverse');
+      $(`.buttons button`).css('animation', 'text-zoom 1.5s reverse');
+    }, 10);
   };
 
   return (
@@ -35,10 +43,10 @@ function MenuContainer() {
         <div className='stretchy-wrapper'>
           <div>
 
-            <Fullscreen isFullscreen={isFullscreen} />
+            <Fullscreen isFullscreen={isFullscreen} shrinkPanel={shrinkPanel} />
 
             <div className='panel-container'>
-              <div className='panels' onClick={(e) => {addId(e)}}>
+              <div className='panels' onClick={(e) => {growPanel(e)}}>
                 <div className='p-row'>
                   <div className='panel' id='panel-1' ></div>
                   <div className='panel' id='panel-2'></div>
