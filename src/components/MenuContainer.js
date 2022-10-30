@@ -32,7 +32,7 @@ function MenuContainer() {
       $(`.anim-panel`).css('animation', 'panel-shrink 1.5s forwards');
       $(`.panel-container`).css('display', 'flex');
       $(`.hud-container`).css('display', 'flex');
-      $(`.stretchy-wrapper`).css('animation', 'fade-to-black 1.5s reverse');
+      $(`.stretchy-wrapper`).css('animation', 'fade-from-black 1.5s forwards');
       $(`.buttons button`).css('animation', 'text-zoom 1.5s reverse');
     }, 10);
   };

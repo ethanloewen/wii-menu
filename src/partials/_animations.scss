@@ -33,6 +33,11 @@
     to {background-color: black;}
 }
 
+@keyframes fade-from-black {
+    from {background-color: black;}
+    to {background: rgb(216, 216, 216);}
+}
+
 @keyframes text-zoom {
     0% {font-size: 0px;}
     10% {font-size: 0.5rem;}
