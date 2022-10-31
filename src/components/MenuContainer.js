@@ -17,11 +17,12 @@ function MenuContainer() {
 
     // small timeout required to make the animation work properly
     setTimeout(() => {
-      $(`.anim-panel`).css('animation', 'p3 1.5s forwards');
+      $(`.anim-panel`).css('animation', `${e.target.id} 1.5s forwards`);
+      $(`#fullscreen-main`).css('animation', 'fade-to-black 0.75s forwards');
       // $(`.anim-panel`).css('animation', 'panel-fullscreen-test 1.5s forwards');
       // $(`.panel-container`).css('display', 'none');
       // $(`.hud-container`).css('display', 'none');
-      // $(`.stretchy-wrapper`).css('animation', 'fade-to-black 1.5s forwards');
+      
       // $(`.buttons button`).css('animation', 'text-zoom 1.5s forwards');
     }, 10);
 
@@ -49,22 +50,22 @@ function MenuContainer() {
             <div className='panel-container'>
               <div className='panels' onClick={(e) => {enterFullscreen(e)}}>
                 <div className='p-row'>
-                  <div className='panel' id='panel-1' ></div>
-                  <div className='panel' id='panel-2'></div>
-                  <div className='panel' id='panel-3'></div>
-                  <div className='panel' id='panel-4'></div>
+                  <div className='panel' id='p1' ></div>
+                  <div className='panel' id='p2'></div>
+                  <div className='panel' id='p3'></div>
+                  <div className='panel' id='p4'></div>
                 </div>
                 <div className='p-row'>
-                  <div className='panel' id='panel-5'></div>
-                  <div className='panel' id='panel-6'></div>
-                  <div className='panel' id='panel-7'></div>
-                  <div className='panel' id='panel-8'></div>
+                  <div className='panel' id='p5'></div>
+                  <div className='panel' id='p6'></div>
+                  <div className='panel' id='p7'></div>
+                  <div className='panel' id='p8'></div>
                 </div>
                 <div className='p-row'>
-                  <div className='panel' id='panel-9'></div>
-                  <div className='panel' id='panel-10'></div>
-                  <div className='panel' id='panel-11'></div>
-                  <div className='panel' id='panel-12'></div>
+                  <div className='panel' id='p9'></div>
+                  <div className='panel' id='p10'></div>
+                  <div className='panel' id='p11'></div>
+                  <div className='panel' id='p12'></div>
                 </div>
               </div>
             </div>
