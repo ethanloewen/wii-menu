@@ -9,6 +9,8 @@
 
         @keyframes #{$panelId} {
             0% {
+                width: 18.8%;
+                height: 18.5%;
                 margin-left: #{nth($pos, 1)};
                 margin-top: #{nth($pos, 2)};
             }
@@ -17,6 +19,21 @@
                 height: 90%;
                 margin-left: 2%;
                 margin-top: 3%;
+            }
+        }
+
+        @keyframes #{$panelId}-reverse {
+            0% {
+                width: 96%;
+                height: 90%;
+                margin-left: 2%;
+                margin-top: 3%;
+            }
+            100% {
+                width: 18.8%;
+                height: 18.5%;
+                margin-left: #{nth($pos, 1)};
+                margin-top: #{nth($pos, 2)};
             }
         }
     }
