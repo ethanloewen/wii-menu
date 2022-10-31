@@ -39,17 +39,31 @@
 }
 
 @keyframes text-grow {
-    0% {font-size: 0px;}
+    0% {
+        font-size: 0px;
+        pointer-events: none;
+    }
     10% {font-size: 0.5rem;}
     90% {font-size: 3rem;}
-    100% {font-size: 3rem;}
+    99% {pointer-events: none;}
+    100% {
+        font-size: 3rem;
+        pointer-events: all;
+    }
 }
 
 @keyframes text-shrink {
-    0% {font-size: 3rem;}
+    0% {
+        font-size: 3rem;
+        pointer-events: none;
+    }
     10% {font-size: 3rem;}
     90% {font-size: 0.5rem;}
-    100% {font-size: 0px;}
+    99% {pointer-events: none;}
+    100% {
+        font-size: 0px;
+        pointer-events: all;
+    }
 }
 
 // @keyframes transition-opacity {
