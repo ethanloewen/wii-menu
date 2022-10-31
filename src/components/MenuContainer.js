@@ -18,7 +18,8 @@ function MenuContainer() {
     // small timeout required to make the animation work properly
     setTimeout(() => {
       $(`.anim-panel`).css('animation', `${e.target.id} 1.5s forwards`);
-      $(`#fullscreen-main`).css('animation', 'fade-to-black 0.75s forwards');
+      // $(`#fullscreen-main`).css('animation', 'fade-to-black 0.75s forwards');
+      $(`#fullscreen-main`).css('animation', 'fade-transition 0.5s forwards');
       // $(`.anim-panel`).css('animation', 'panel-fullscreen-test 1.5s forwards');
       // $(`.panel-container`).css('display', 'none');
       // $(`.hud-container`).css('display', 'none');

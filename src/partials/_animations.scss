@@ -1,41 +1,18 @@
 @import './variables';
 @import './mixins';
 
+// run the mixin for panel generating animations
 @include generatePanelAnimations($panelPositions);
 
-// @keyframes panel-fullscreen {
-//     from {
-//         height: 19.5%;
-//         width: 19.6%;
-//         margin-left: 10%;
-//         margin-top: 6.2%;
-//     }
-//     to {
-//         width: 96%;
-//         height: 90%;
-//         margin-left: 2%;
-//         margin-top: 3%;
-//     }
-// }
-
-// @keyframes panel-shrink {
-//     from {
-//         width: 96%;
-//         height: 90%;
-//         margin-left: 2%;
-//         margin-top: 3%;
-//     }
-//     to {
-//         height: 19.5%;
-//         width: 19.6%;
-//         margin-left: 10%;
-//         margin-top: 6.2%;
-//     }
-// }
-
-@keyframes fade-to-black {
-    from {background-color: rgba(255, 255, 255, 0);}
-    to {background-color: black;}
+@keyframes fade-transition {
+    from {
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 @keyframes fade-from-black {
@@ -47,5 +24,15 @@
     0% {font-size: 0px;}
     10% {font-size: 0.5rem;}
     90% {font-size: 3rem;}
+}
+
+@keyframes transition-opacity {
+    from {
+        visibility: visible;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 

@@ -9,13 +9,15 @@
     z-index: 20;
     position: relative;
 
-    // background-color: black;
+    background-color: black;
+    visibility: hidden;
 
     .anim-panel {
         // animation: p1 5s forwards;
         position: relative;
         border-radius: 15px;
         background-color: rgb(237, 138, 33);
+        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
