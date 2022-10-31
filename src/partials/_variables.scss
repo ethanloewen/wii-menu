@@ -1,16 +1,17 @@
-@mixin setAnimationStart($left, $top) {
-    @keyframes panel-fullscreen {
-        from {
-            height: 19.5%;
-            width: 19.6%;
-            margin-left: $left;
-            margin-top: $top;
-        }
-        to {
-            width: 96%;
-            height: 90%;
-            margin-left: 2%;
-            margin-top: 3%;
-        }
-    }
-}
+// list of all possible panel positions
+$panelPositions: (
+    p1: (
+        10%,
+        6.2%
+    ),
+
+    // p2: (
+
+    // ),
+    // p3: (
+
+    // ),
+    // p4: (
+
+    // )
+);

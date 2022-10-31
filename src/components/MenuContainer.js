@@ -6,7 +6,7 @@ import $ from "jquery";
 
 
 function MenuContainer() {
-  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(true);
 
   const growPanel = (e) => {
     console.log(e.target.id);
@@ -17,11 +17,12 @@ function MenuContainer() {
 
     // small timeout required to make the animation work properly
     setTimeout(() => {
-      $(`.anim-panel`).css('animation', 'panel-fullscreen 1.5s forwards');
-      $(`.panel-container`).css('display', 'none');
-      $(`.hud-container`).css('display', 'none');
-      $(`.stretchy-wrapper`).css('animation', 'fade-to-black 1.5s forwards');
-      $(`.buttons button`).css('animation', 'text-zoom 1.5s forwards');
+      $(`.anim-panel`).css('animation', 'p1 5s forwards');
+      // $(`.anim-panel`).css('animation', 'panel-fullscreen-test 1.5s forwards');
+      // $(`.panel-container`).css('display', 'none');
+      // $(`.hud-container`).css('display', 'none');
+      // $(`.stretchy-wrapper`).css('animation', 'fade-to-black 1.5s forwards');
+      // $(`.buttons button`).css('animation', 'text-zoom 1.5s forwards');
     }, 10);
 
   };

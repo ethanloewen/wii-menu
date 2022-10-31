@@ -1,0 +1,25 @@
+@import './variables';
+
+// generate animations for each panel location
+@mixin generatePanelAnimations($positions) {
+
+    @each $panelId, $pos in $positions {
+
+        // @error "pos: #{nth($pos, 1)}";
+
+        @keyframes #{$panelId} {
+            from {
+                height: 19.5%;
+                width: 19.6%;
+                margin-left: #{nth($pos, 1)};
+                margin-top: #{nth($pos, 2)};
+            }
+            to {
+                width: 96%;
+                height: 90%;
+                margin-left: 2%;
+                margin-top: 3%;
+            }
+        }
+    }
+};

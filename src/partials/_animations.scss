@@ -1,3 +1,8 @@
+@import './variables';
+@import './mixins';
+
+@include generatePanelAnimations($panelPositions);
+
 @keyframes panel-fullscreen {
     from {
         height: 19.5%;
@@ -43,3 +48,4 @@
     10% {font-size: 0.5rem;}
     90% {font-size: 3rem;}
 }
+
