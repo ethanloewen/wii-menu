@@ -8,13 +8,11 @@
         // @error "pos: #{nth($pos, 1)}";
 
         @keyframes #{$panelId} {
-            from {
-                height: 19.5%;
-                width: 19.6%;
+            0% {
                 margin-left: #{nth($pos, 1)};
                 margin-top: #{nth($pos, 2)};
             }
-            to {
+            100% {
                 width: 96%;
                 height: 90%;
                 margin-left: 2%;

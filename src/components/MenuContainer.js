@@ -8,7 +8,7 @@ import $ from "jquery";
 function MenuContainer() {
   const [isFullscreen, setIsFullscreen] = useState(true);
 
-  const growPanel = (e) => {
+  const enterFullscreen = (e) => {
     console.log(e.target.id);
     // $(`#${e.target.id}`).attr('id', 'panel-zoom');
 
@@ -17,7 +17,7 @@ function MenuContainer() {
 
     // small timeout required to make the animation work properly
     setTimeout(() => {
-      $(`.anim-panel`).css('animation', 'p1 5s forwards');
+      $(`.anim-panel`).css('animation', 'p3 1.5s forwards');
       // $(`.anim-panel`).css('animation', 'panel-fullscreen-test 1.5s forwards');
       // $(`.panel-container`).css('display', 'none');
       // $(`.hud-container`).css('display', 'none');
@@ -27,7 +27,7 @@ function MenuContainer() {
 
   };
 
-  const shrinkPanel = (e) => {
+  const exitFullscreen = (e) => {
     // small timeout required to make the animation work properly
     setTimeout(() => {
       $(`.anim-panel`).css('animation', 'panel-shrink 1.5s forwards');
@@ -44,10 +44,10 @@ function MenuContainer() {
         <div className='stretchy-wrapper'>
           <div>
 
-            <Fullscreen isFullscreen={isFullscreen} shrinkPanel={shrinkPanel} />
+            <Fullscreen isFullscreen={isFullscreen} shrinkPanel={exitFullscreen} />
 
             <div className='panel-container'>
-              <div className='panels' onClick={(e) => {growPanel(e)}}>
+              <div className='panels' onClick={(e) => {enterFullscreen(e)}}>
                 <div className='p-row'>
                   <div className='panel' id='panel-1' ></div>
                   <div className='panel' id='panel-2'></div>
