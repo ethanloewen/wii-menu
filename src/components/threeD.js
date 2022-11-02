@@ -1,4 +1,4 @@
-import './3D.scss';
+import './threeD.scss';
 import $ from "jquery";
 
 
