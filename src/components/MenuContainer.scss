@@ -80,11 +80,15 @@ $hudheight: 25%;
                     width: inherit;
                     position: absolute;
                     display: flex;
+                    border: 1px solid red;
+                    background-image: url('../../public/wii_menu_footer.png');
+                    background-size: contain;
                     
                     .hud {
+                        border: 1px solid blue;
                         width: 100%;
                         height: $hudheight;
-                        background-color: rgb(196, 196, 196);
+                        background-color: rgba(196, 196, 196, 0);
                         position: relative;
                         top: calc(100% - $hudheight);
                         display: flex;
