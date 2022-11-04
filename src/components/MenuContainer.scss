@@ -105,6 +105,10 @@ $hudheight: 25%;
 
                         #right-cap {
                             margin-right: 4%;
+
+                            .hud-button {
+                                margin-left: 10%;
+                            }
                         }
 
                         .hud-cap {
@@ -121,9 +125,9 @@ $hudheight: 25%;
                             
 
                             .hud-button {
-                                visibility: hidden;
-                                width: 110%;
-                                height: 110%;
+                                // visibility: hidden;
+                                width: 85%;
+                                height: 85%;
                                 border-radius: 50%;
                                 background-color: rgb(227, 227, 227);
                                 border: 0.3rem solid rgb(12, 213, 249);
@@ -132,7 +136,6 @@ $hudheight: 25%;
                                 
                             }
 
-                            // left side hud-ring
 
                             .hud-ring {
                                 position: absolute;
