@@ -45,7 +45,6 @@ $hudheight: 25%;
                         width: 80%;
                         height: 60%;
                         margin-top: -10%; // offset panels to match wii layout
-                        // border: 1px solid red;
 
                         .p-row {
                             position: relative;
@@ -85,6 +84,7 @@ $hudheight: 25%;
                     background-size: contain;
                     
                     .hud {
+                        opacity: 0.8;
                         border: 1px solid blue;
                         width: 100%;
                         height: $hudheight;
@@ -102,7 +102,6 @@ $hudheight: 25%;
                             #right-ring {
                                 margin-left: 0;
                                 margin-left: 52.5%;
-                                // border: 1px solid red;
                             }
                         }
 
@@ -112,7 +111,6 @@ $hudheight: 25%;
                             padding-bottom: 8%;
                             margin-top: -1%;
                             margin-left: 6%;
-                            // margin-top: 2.5%;
                             height: 0;
                             border-radius: 50%;
                             background-color: rgb(227, 227, 227);
@@ -135,7 +133,6 @@ $hudheight: 25%;
 
                             .hud-ring {
                                 position: absolute;
-                                // left: -77.5%;
                                 margin-left: -77.5%;
                                 width: 125%;
                                 height: 0;
@@ -167,17 +164,12 @@ $hudheight: 25%;
     z-index: 99;
     width: 100%;
     height: 100%;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
 
     .clock-main {
         position: absoulte;
         width: 100%;
         padding-bottom: 56.25%; //16:9 aspect ratio
-        // margin-top: -56.25%;
         height: 0;
-        // border: 5px solid rgb(77, 110, 233);
         display: flex;
         flex-direction: column;
         // justify-content: center;
