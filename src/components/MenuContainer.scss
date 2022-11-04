@@ -84,6 +84,8 @@ $hudheight: 25%;
                     background-size: contain;
                     
                     .hud {
+                        // overflow: hidden;
+
                         opacity: 0.9;
                         // border: 1px solid blue;
                         width: 100%;
@@ -146,6 +148,7 @@ $hudheight: 25%;
 
                             #left-ring {
                                 margin-left: -44%;
+                                box-shadow: -0.6rem 0 0 0.6rem rgb(194, 20, 20);
                             }
                             
                             #right-ring {
