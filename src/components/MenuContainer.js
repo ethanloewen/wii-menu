@@ -84,12 +84,12 @@ function MenuContainer() {
 
               <div className='hud'>
                 <div className='hud-cap' id='left-cap'>
-                  <div className='hud-button'></div>
-                  <div className='hud-ring'></div>
+                  {/* <div className='hud-button'></div> */}
+                  <div className='hud-ring' id='left-ring'></div>
                 </div>
 
                 <div className='hud-cap' id='right-cap'>
-                  <div className='hud-button'></div>
+                  {/* <div className='hud-button'></div> */}
                   <div className='hud-ring' id='right-ring'></div>
                 </div>
               </div>
