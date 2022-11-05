@@ -7,6 +7,11 @@ function Projects(props) {
 
   return (
     <div id='projects-main'>
+
+        <div className='project-title'>
+            <h1>:Tiny URL</h1>
+        </div>
+
         <div className='spinner s1'>
             <div className='spin-item'></div>
         </div>
@@ -29,6 +34,18 @@ function Projects(props) {
             <div className='spin-item'></div>
         </div>
         <div className='spinner s8'>
+            <div className='spin-item'></div>
+        </div>
+        <div className='spinner s9'>
+            <div className='spin-item'></div>
+        </div>
+        <div className='spinner s10'>
+            <div className='spin-item'></div>
+        </div>
+        <div className='spinner s11'>
+            <div className='spin-item'></div>
+        </div>
+        <div className='spinner s12'>
             <div className='spin-item'></div>
         </div>
     </div>
