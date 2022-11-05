@@ -1,5 +1,61 @@
 #projects-main {
     width: 100%;
     height: 75%;
-    background-color: red;
+    background-color: rgb(208, 112, 112);
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+
+    .spinner {
+        // z-index: 100;
+        position: absolute;
+        height: 0;
+        padding-bottom: 80%;
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 10%;
+        border-radius: 50%;
+        background-color: none;
+        background-color: none;
+
+        .spin-item {
+            width: 18%;
+            height: 18%;
+            margin-left: 41%;
+            background-color: black;
+            border-radius: 50%;
+        }
+    }
+
+    .spinner.s1 {
+        transform: rotate(0deg);
+    }
+
+    .spinner.s2 {
+        transform: rotate(45deg);
+    }
+
+    .spinner.s3 {
+        transform: rotate(90deg);
+    }
+
+    .spinner.s4 {
+        transform: rotate(135deg);
+    }
+
+    .spinner.s5 {
+        transform: rotate(180deg);
+    }
+
+    .spinner.s6 {
+        transform: rotate(225deg);
+    }
+
+    .spinner.s7 {
+        transform: rotate(270deg);
+    }
+
+    .spinner.s8 {
+        transform: rotate(315deg);
+    }
 }
