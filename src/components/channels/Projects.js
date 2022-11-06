@@ -12,9 +12,13 @@ function Projects(props) {
             <h1>:Tiny URL</h1>
         </div>
 
-        <div className='spinner s1'>
-            <div className='spin-item'></div>
+        <div className='spinner-container'>
+            <div className='spinner s1'>
+                <div className='spin-item'></div>
+            </div>
         </div>
+
+        
         {/* <div className='spinner s2'>
             <div className='spin-item'></div>
         </div>
