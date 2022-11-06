@@ -15,7 +15,7 @@ function Projects(props) {
         <div className='spinner s1'>
             <div className='spin-item'></div>
         </div>
-        <div className='spinner s2'>
+        {/* <div className='spinner s2'>
             <div className='spin-item'></div>
         </div>
         <div className='spinner s3'>
@@ -47,7 +47,7 @@ function Projects(props) {
         </div>
         <div className='spinner s12'>
             <div className='spin-item'></div>
-        </div>
+        </div> */}
     </div>
   );
 }
