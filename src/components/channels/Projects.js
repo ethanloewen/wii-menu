@@ -2,18 +2,24 @@ import './Projects.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFolderOpen } from '@fortawesome/free-regular-svg-icons';
 import { faFolder } from '@fortawesome/free-solid-svg-icons';
-import { nodeName } from 'jquery';
+import $ from 'jquery';
+import { useState } from 'react';
 
 
 
 
 function Projects(props) {
 
+    const [rotation, setRotation] = useState(0);
+
     const iconColor = '#1a1a1a';
     const iconSize = '3x';
     const focusIconSize = '4x';
 
     const updateSpinner = (e) => {
+        setRotation(current => current + 30);
+
+        $(`.spinner-container`).css('transform', `rotate(${rotation}deg)`);
         console.log('id', e.target.id);
     };
 

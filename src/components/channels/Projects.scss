@@ -30,8 +30,10 @@
         margin-top: 10%;
         transform-origin: center center;
 
+        transition: all 1s;
+
         // animation: 1s linear 0s 1 forwards projects-rotate-30;
-        animation: 2.5s ease-in-out 0s 1 forwards projects-rotate-fade;
+        // animation: 2.5s ease-in-out 0s 1 forwards projects-rotate-fade;
 
 
     }
