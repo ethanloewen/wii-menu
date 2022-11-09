@@ -18,6 +18,35 @@ function Projects(props) {
     const iconColor = '#1a1a1a';
     const iconSize = '3x';
     const focusIconSize = '4x';
+    
+    const formatClassesArr = (arr) => {
+        // check for and convert [-1 to 11, 0 to 12, 13 to 1, 14 to 2] (classes must be in i1-i12)
+        for (const elm of arr) {
+            const outputArr = [];
+            switch(elm) {
+                case -1:
+                    outputArr.push(11);
+                    break;
+                    
+                case 0:
+                    outputArr.push(12);
+                    break;
+                
+                case 13:
+                    outputArr.push(1);
+                    break;
+                    
+                case 14:
+                    outputArr.push(2);
+                    break;
+
+                default:
+                    outputArr.push(elm);
+            } 
+        }
+
+        return outputArr;
+    };
 
     const updateSpinner = (e) => {
 
@@ -68,14 +97,14 @@ function Projects(props) {
 
         const classesToUpdate = [];
 
-        if (!(formattedCurrentClass == 1 || formattedCurrentClass === 2 || formattedCurrentClass === 11 || formattedCurrentClass === 12)) {
-            classesToUpdate[0] = formattedCurrentClass - 2;
-            classesToUpdate[1] = formattedCurrentClass - 1;
-            classesToUpdate[2] = formattedCurrentClass + 1;
-            classesToUpdate[3] = formattedCurrentClass + 2;
-        }
+        // if (!(formattedCurrentClass == 1 || formattedCurrentClass === 2 || formattedCurrentClass === 11 || formattedCurrentClass === 12)) {
+        classesToUpdate[0] = formattedCurrentClass - 2;
+        classesToUpdate[1] = formattedCurrentClass - 1;
+        classesToUpdate[2] = formattedCurrentClass + 1;
+        classesToUpdate[3] = formattedCurrentClass + 2;
+        // }
 
-        // check for and convert [-1 to 11, 0 to 12, 13 to 1, 14 to 2]
+        
 
         console.log('classes to update', classesToUpdate);
 
