@@ -75,6 +75,8 @@ function Projects(props) {
             classesToUpdate[3] = formattedCurrentClass + 2;
         }
 
+        // check for and convert [-1 to 11, 0 to 12, 13 to 1, 14 to 2]
+
         console.log('classes to update', classesToUpdate);
 
         // add relevant id to new 'hitbox' classes
