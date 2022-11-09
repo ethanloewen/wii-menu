@@ -20,9 +20,10 @@ function Projects(props) {
     const focusIconSize = '4x';
     
     const formatClassesArr = (arr) => {
+        const outputArr = [];
+
         // check for and convert [-1 to 11, 0 to 12, 13 to 1, 14 to 2] (classes must be in i1-i12)
         for (const elm of arr) {
-            const outputArr = [];
             switch(elm) {
                 case -1:
                     outputArr.push(11);
@@ -95,18 +96,18 @@ function Projects(props) {
         const formattedCurrentClass = parseInt((currentClass).slice(1), 10);
         console.log('formatted curr class', formattedCurrentClass);
 
-        const classesToUpdate = [];
+        let classesToUpdate = [];
 
-        // if (!(formattedCurrentClass == 1 || formattedCurrentClass === 2 || formattedCurrentClass === 11 || formattedCurrentClass === 12)) {
         classesToUpdate[0] = formattedCurrentClass - 2;
         classesToUpdate[1] = formattedCurrentClass - 1;
         classesToUpdate[2] = formattedCurrentClass + 1;
         classesToUpdate[3] = formattedCurrentClass + 2;
-        // }
+
+        const finalFormatted = formatClassesArr(classesToUpdate);
 
         
 
-        console.log('classes to update', classesToUpdate);
+        // console.log('classes to update', classesToUpdate);
 
         // add relevant id to new 'hitbox' classes
         for (let i = 0; i < 4; i++) {
@@ -117,8 +118,8 @@ function Projects(props) {
                 count++;
             }
             
-            $(`.i${classesToUpdate[i]}`).attr("id", `s${count + 1}`);
-            console.log(`.i${classesToUpdate[i]}`, `s${count + 1}`);
+            $(`.i${finalFormatted[i]}`).attr("id", `s${count + 1}`);
+            console.log(`.i${finalFormatted[i]}`, `s${count + 1}`);
         }
 
         setRotation(rotationAmt);
