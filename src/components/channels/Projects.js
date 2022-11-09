@@ -13,6 +13,7 @@ function Projects(props) {
             </div>
 
             <div className='spinner-container'>
+
                 <div className='spinner s1'>
                     <div className='spin-item'></div>
                 </div>
@@ -50,6 +51,7 @@ function Projects(props) {
                 <div className='spinner s12'>
                     <div className='spin-item'></div>
                 </div>
+                
             </div>
 
 
