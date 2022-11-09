@@ -94,7 +94,6 @@ function Projects(props) {
 
         // update the positions of the 'hitbox' divs
         const formattedCurrentClass = parseInt((currentClass).slice(1), 10);
-        console.log('formatted curr class', formattedCurrentClass);
 
         let classesToUpdate = [];
 
@@ -103,11 +102,8 @@ function Projects(props) {
         classesToUpdate[2] = formattedCurrentClass + 1;
         classesToUpdate[3] = formattedCurrentClass + 2;
 
+        // use the formatClassesArr() function to normalize the unwanted values
         const finalFormatted = formatClassesArr(classesToUpdate);
-
-        
-
-        // console.log('classes to update', classesToUpdate);
 
         // add relevant id to new 'hitbox' classes
         for (let i = 0; i < 4; i++) {
@@ -123,11 +119,7 @@ function Projects(props) {
         }
 
         setRotation(rotationAmt);
-        // setId(`${currentId}`);
         setLastClass(`${currentClass}`)
-        console.log('id at end of cycle', id);
-        // setClickedClass(`${currentClass}`);
-        // console.log('id', e.target.id);
     };
 
     return (
