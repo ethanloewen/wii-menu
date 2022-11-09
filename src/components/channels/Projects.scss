@@ -21,7 +21,8 @@
         margin-top: 10%;
         transform-origin: center center;
 
-        // transform: rotate(30deg);
+        // animation: projects-full-rotate 1s forwards;
+        animation: 2.5s ease-in-out 0s forwards projects-rotate-fade;
 
     }
 
