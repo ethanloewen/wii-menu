@@ -30,7 +30,9 @@
         margin-top: 10%;
         transform-origin: center center;
 
-        animation: 2.5s ease-in-out 0s 12 forwards projects-rotate-fade;
+        // animation: 1s linear 0s 1 forwards projects-rotate-30;
+        animation: 2.5s ease-in-out 0s 1 forwards projects-rotate-fade;
+
 
     }
 
@@ -43,6 +45,7 @@
         background-color: none;
 
         .spin-item {
+            pointer-events: all;
             width: 10%;
             height: 10%;
             margin-left: 45%;
