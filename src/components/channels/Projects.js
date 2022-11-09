@@ -37,9 +37,11 @@ function Projects(props) {
         // remove id from old element
         $(`#${lastId}`).attr("id", "replaced");
 
+        // get id without letter
         const formattedCurrentId = (currentId).slice(1);
-        console.log('formattedId', typeof formattedCurrentId);
+        // console.log('formattedId', typeof formattedCurrentId);
 
+        // set a rotation amount based on how far away was clicked
         if (formattedCurrentId === '5') {
             rotationAmt -= 60;
         } 
@@ -47,15 +49,35 @@ function Projects(props) {
             rotationAmt -= 30;
             console.log('hit');
         } 
-        // note case (formattedCurrentId === 3) is already handled above
+        // note: case (formattedCurrentId === 3) is already handled above
         else if (formattedCurrentId === '2') {
             rotationAmt += 30;
         } 
         else if (formattedCurrentId === '1') {
             rotationAmt += 60;
         }
+
         
+        // set the transform to update the spinner's rotation
         $(`.spinner-container`).css('transform', `rotate(${rotationAmt}deg)`);
+
+        // update the positions of the 'hitbox' divs
+        const formattedCurrentClass = parseInt((currentClass).slice(1), 10);
+
+        const classesToUpdate = [];
+
+        if (!(formattedCurrentClass == 1 || formattedCurrentClass === 2 || formattedCurrentClass === 11 || formattedCurrentClass === 12)) {
+            classesToUpdate[0] = formattedCurrentClass - 2;
+            classesToUpdate[1] = formattedCurrentClass - 1;
+            classesToUpdate[2] = formattedCurrentClass + 1;
+            classesToUpdate[3] = formattedCurrentClass + 2;
+        }
+
+        // add relevant id to new 'hitbox' classes
+        for (let i = 0; i < 4; i++) {
+            console.log(i);
+            $(`.spinner-container`).css('transform', `rotate(${rotationAmt}deg)`);
+        }
 
         setRotation(rotationAmt);
         setId(`${currentId}`);
