@@ -12,7 +12,7 @@ function Projects(props) {
 
     const [rotation, setRotation] = useState(0);
     const [id, setId] = useState('s3');
-    const [lastClass, setLastClass] = useState('i1');
+    const [clickedClass, setClickedClass] = useState('i1');
 
     const iconColor = '#1a1a1a';
     const iconSize = '3x';
@@ -20,21 +20,22 @@ function Projects(props) {
 
     const updateSpinner = (e) => {
 
+        // return if the same element is clicked again
+        if ((e.target.id).slice(1) === '3') {
+            return;
+        }
+
         const lastId = id;
         const currentId = e.target.id;
+        const currentClass = e.target.classList[0];
         let rotationAmt = rotation;
 
-        console.log(e.target.classList);
+        console.log('clicked class', e.target.classList[0]);
 
         // make the selected element have id of 's3'
         $(`#${currentId}`).attr("id", "s3");
-        console.log('lastId', lastId);
+        // remove id from old element
         $(`#${lastId}`).attr("id", "replaced");
-
-        // return if the same element is clicked
-        if (currentId === 3) {
-            return;
-        }
 
         const formattedCurrentId = (currentId).slice(1);
         console.log('formattedId', typeof formattedCurrentId);
@@ -58,6 +59,7 @@ function Projects(props) {
 
         setRotation(rotationAmt);
         setId(`${currentId}`);
+        setClickedClass()
         // console.log('id', e.target.id);
     };
 
@@ -72,63 +74,63 @@ function Projects(props) {
             <div className='spinner-container' onClick={(e) => {updateSpinner(e)}}>
 
                 <div className='spinner s6'>
-                    <div className='spin-item i1' id='s3'>
+                    <div className='i1 spin-item' id='s3'>
                         <FontAwesomeIcon icon={faFolderOpen} size={focusIconSize} color={iconColor} pointerEvents='none' />
                     </div>
                 </div>
 
                 <div className='spinner s7'>
-                    <div className='spin-item i2' id='s4'>
+                    <div className='i2 spin-item' id='s4'>
                         <FontAwesomeIcon icon={faFolder} size={iconSize} pointerEvents='none'/>
                     </div>
                 </div>
                 <div className='spinner s8'>
-                    <div className='spin-item i3' id='s5'>
+                    <div className='i3 spin-item' id='s5'>
                         <FontAwesomeIcon icon={faFolder} size={iconSize} pointerEvents='none'/>
                     </div>
                 </div>
                 <div className='spinner s9'>
-                    <div className='spin-item i4' id='blank'>
+                    <div className='i4 spin-item' id='blank'>
                         <FontAwesomeIcon icon={faFolder} size={iconSize} pointerEvents='none'/>
                     </div>
                 </div>
                 <div className='spinner s10'>
-                    <div className='spin-item i5' id='blank'>
+                    <div className='i5 spin-item' id='blank'>
                         <FontAwesomeIcon icon={faFolder} size={iconSize} pointerEvents='none'/>
                     </div>
                 </div>
                 <div className='spinner s11'>
-                    <div className='spin-item i6' id='blank'>
+                    <div className='i6 spin-item' id='blank'>
                         <FontAwesomeIcon icon={faFolder} size={iconSize} pointerEvents='none'/>
                     </div>
                 </div>
                 <div className='spinner s12'>
-                    <div className='spin-item i7' id='blank'>
+                    <div className='i7 spin-item' id='blank'>
                         <FontAwesomeIcon icon={faFolder} size={iconSize} pointerEvents='none'/>
                     </div>
                 </div>
                 <div className='spinner s1'>
-                    <div className='spin-item i8' id='blank'>
+                    <div className='i8 spin-item' id='blank'>
                         <FontAwesomeIcon icon={faFolder} size={iconSize} pointerEvents='none'/>
                     </div>
                 </div>
                 <div className='spinner s2'>
-                    <div className='spin-item i9' id='blank'>
+                    <div className='i9 spin-item' id='blank'>
                         <FontAwesomeIcon icon={faFolder} size={iconSize} pointerEvents='none'/>
                     </div>
                 </div>
                 <div className='spinner s3'>
-                    <div className='spin-item i10' id='blank'>
+                    <div className='i10 spin-item' id='blank'>
                         <FontAwesomeIcon icon={faFolder} size={iconSize} pointerEvents='none'/>
                     </div>
                 </div>
                 <div className='spinner s4'>
-                    <div className='spin-item i11' id='s1'>
+                    <div className='i11 spin-item' id='s1'>
                         <FontAwesomeIcon icon={faFolder} size={iconSize} pointerEvents='none'/>
                     </div>
                 </div>
                 <div className='spinner s5'>
-                    <div className='spin-item i12' id='s2'>
+                    <div className='i12 spin-item' id='s2'>
                         <FontAwesomeIcon icon={faFolder} size={iconSize} pointerEvents='none'/>
                     </div>
                 </div>
