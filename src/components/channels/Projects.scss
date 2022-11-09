@@ -30,7 +30,8 @@
         margin-top: 10%;
         transform-origin: center center;
 
-        transition: all 1s;
+        transition: all 0.5s;
+        transition-timing-function: ease-in-out;
 
         // animation: 1s linear 0s 1 forwards projects-rotate-30;
         // animation: 2.5s ease-in-out 0s 1 forwards projects-rotate-fade;
@@ -58,62 +59,64 @@
             align-items: center;
 
         }
+
     }
 
-    .spinner.s1 {
-        transform: rotate(0deg);
-        // background-color: white;
-
-        .spin-item {
-            width: 12%;
-            height: 12%;
-            margin-left: 44%;
-            background-color: rgb(91, 221, 164);
-
-        }
-    }
-
-    .spinner.s2 {
-        transform: rotate(30deg);
-    }
-
-    .spinner.s3 {
-        transform: rotate(60deg);
-    }
-
-    .spinner.s4 {
-        transform: rotate(90deg);
-    }
-
-    .spinner.s5 {
-        transform: rotate(120deg);
+    .spinner #s6 {
+        width: 12%;
+        height: 12%;
+        margin-left: 44%;
+        background-color: rgb(91, 221, 164);
     }
 
     .spinner.s6 {
-        transform: rotate(150deg);
+        transform: rotate(0deg);
+        // background-color: white;
+
+        
     }
 
     .spinner.s7 {
-        transform: rotate(180deg);
+        transform: rotate(30deg);
     }
 
     .spinner.s8 {
-        transform: rotate(210deg);
+        transform: rotate(60deg);
     }
 
     .spinner.s9 {
-        transform: rotate(240deg);
+        transform: rotate(90deg);
     }
 
     .spinner.s10 {
-        transform: rotate(270deg);
+        transform: rotate(120deg);
     }
 
     .spinner.s11 {
-        transform: rotate(300deg);
+        transform: rotate(150deg);
     }
 
     .spinner.s12 {
+        transform: rotate(180deg);
+    }
+
+    .spinner.s1 {
+        transform: rotate(210deg);
+    }
+
+    .spinner.s2 {
+        transform: rotate(240deg);
+    }
+
+    .spinner.s3 {
+        transform: rotate(270deg);
+    }
+
+    .spinner.s4 {
+        transform: rotate(300deg);
+    }
+
+    .spinner.s5 {
         transform: rotate(330deg);
     }
 }
