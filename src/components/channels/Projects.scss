@@ -49,6 +49,8 @@
 
         .spin-item {
             pointer-events: all;
+            transition: all 0.5s;
+            transition-timing-function: ease-in-out;
             width: 10%;
             height: 10%;
             margin-left: 45%;
@@ -62,7 +64,7 @@
 
     }
 
-    .spinner #s6 {
+    .spinner #s3 {
         width: 12%;
         height: 12%;
         margin-left: 44%;
