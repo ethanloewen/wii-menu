@@ -9,7 +9,8 @@ import { faFolder } from '@fortawesome/free-solid-svg-icons';
 function Projects(props) {
 
     const iconColor = '#1a1a1a';
-    const iconSize = '4x';
+    const iconSize = '3x';
+    const focusIconSize = '4x';
 
     return (
         <div id='projects-main'>
@@ -23,7 +24,7 @@ function Projects(props) {
 
                 <div className='spinner s1'>
                     <div className='spin-item'>
-                        <FontAwesomeIcon icon={faFolderOpen} size={iconSize} color={iconColor} />
+                        <FontAwesomeIcon icon={faFolderOpen} size={focusIconSize} color={iconColor} />
                     </div>
                 </div>
 
@@ -83,6 +84,10 @@ function Projects(props) {
                     </div>
                 </div>
                 
+            </div>
+
+            <div className='panel-name'>
+                <h2>Projects</h2>
             </div>
 
 

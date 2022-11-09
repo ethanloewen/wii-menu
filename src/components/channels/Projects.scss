@@ -12,6 +12,15 @@
         }
     }
 
+    .panel-name {
+        border: 2px solid green;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        font-size: 4rem;
+    }
+
     .spinner-container {
         // z-index: 100;
         height: 0;
@@ -21,7 +30,7 @@
         margin-top: 10%;
         transform-origin: center center;
 
-        animation: 2.5s ease-in-out 0s forwards projects-rotate-fade;
+        animation: 2.5s ease-in-out 0s 12 forwards projects-rotate-fade;
 
     }
 
