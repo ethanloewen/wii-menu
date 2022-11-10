@@ -17,19 +17,42 @@ function Projects(props) {
         {
             'title': 'Project 2',
             'link': 'testlink2'
+        },
+        {
+            'title': 'Project 3',
+            'link': 'testlink3'
+        },
+        {
+            'title': 'Project 4',
+            'link': 'testlink4'
+        },
+        {
+            'title': 'Project 5',
+            'link': 'testlink5'
         }
     ];
 
     const [rotation, setRotation] = useState(0);
     const [id, setId] = useState('s3');
     const [lastClass, setLastClass] = useState('i1');
-    const [projectInfo, setProjectInfo] = useState(projectDetails[0]);
+    const [projectIndex, setProjectIndex] = useState(0);
+    const [projectInfo, setProjectInfo] = useState(projectDetails[projectIndex]);
 
     
 
     const iconColor = '#1a1a1a';
     const iconSize = '3x';
     const focusIconSize = '4x';
+
+    // NEW function to wrap negatives (might replace formatClassesArr as a more generic ver.)
+    const wrapInRange = (n, m) => {
+        const num = n;
+        const max = m;
+
+        const wrappedValue = num % max;
+
+        return wrappedValue;
+    };
     
     // check for and convert [-1 to 11, 0 to 12, 13 to 1, 14 to 2] (classes must be in i1-i12)
     const formatClassesArr = (arr) => {
@@ -138,6 +161,7 @@ function Projects(props) {
 
             <div className='project-title'>
                 <h1>:{projectInfo.title}</h1>
+                {/* <h1>:{wrapInRange()}</h1> */}
             </div>
 
             <div className='spinner-container' onClick={(e) => {updateSpinner(e)}}>
