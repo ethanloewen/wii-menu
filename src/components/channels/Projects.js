@@ -12,8 +12,18 @@ function Projects(props) {
 
     const [rotation, setRotation] = useState(0);
     const [id, setId] = useState('s3');
-    // const [clickedClass, setClickedClass] = useState('');
     const [lastClass, setLastClass] = useState('i1');
+
+    const projectInfo = [
+        {
+            'title': 'Project 1',
+            'link': 'testlink1'
+        },
+        {
+            'title': 'Project 2',
+            'link': 'testlink2'
+        }
+    ];
 
     const iconColor = '#1a1a1a';
     const iconSize = '3x';
