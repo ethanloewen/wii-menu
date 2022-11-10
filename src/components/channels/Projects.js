@@ -9,12 +9,7 @@ import { useState } from 'react';
 
 
 function Projects(props) {
-
-    const [rotation, setRotation] = useState(0);
-    const [id, setId] = useState('s3');
-    const [lastClass, setLastClass] = useState('i1');
-
-    const projectInfo = [
+    const projectDetails = [
         {
             'title': 'Project 1',
             'link': 'testlink1'
@@ -24,6 +19,13 @@ function Projects(props) {
             'link': 'testlink2'
         }
     ];
+
+    const [rotation, setRotation] = useState(0);
+    const [id, setId] = useState('s3');
+    const [lastClass, setLastClass] = useState('i1');
+    const [projectInfo, setProjectInfo] = useState(projectDetails[0]);
+
+    
 
     const iconColor = '#1a1a1a';
     const iconSize = '3x';
@@ -87,7 +89,6 @@ function Projects(props) {
         } 
         else if (formattedCurrentId === '4') {
             rotationAmt -= 30;
-            console.log('hit');
         } 
         // note: case (formattedCurrentId === 3) is already handled above
         else if (formattedCurrentId === '2') {
@@ -136,7 +137,7 @@ function Projects(props) {
 
 
             <div className='project-title'>
-                <h1>:Tiny URL</h1>
+                <h1>:{projectInfo.title}</h1>
             </div>
 
             <div className='spinner-container' onClick={(e) => {updateSpinner(e)}}>
