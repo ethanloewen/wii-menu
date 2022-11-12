@@ -5,11 +5,13 @@ import Projects from './channels/Projects.js';
 function Fullscreen(props) {
   const [startLink, setStartLink] = useState('');
 
+  console.log(startLink);
+
   return (
     <div id='fullscreen-main'>
       <div className='anim-panel'>
 
-        <Projects />
+        <Projects setStartLink={setStartLink} />
 
         <div className='buttons-container'>
           <div className='buttons'>
