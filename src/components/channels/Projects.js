@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFolderOpen } from '@fortawesome/free-regular-svg-icons';
 import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import $ from 'jquery';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 
@@ -38,6 +38,8 @@ function Projects(props) {
     const [projectIndex, setProjectIndex] = useState(0);
     const [projectInfo, setProjectInfo] = useState(projectDetails[projectIndex]);
 
+    // setProjectIndex(prev => wrapInRange((prev + 1), 5));
+
     
 
     const iconColor = '#1a1a1a';
@@ -61,16 +63,16 @@ function Projects(props) {
             finalVal += max;
         }
 
-        if (finalVal == 0) {
-            finalVal = max;
-        }
+        // if (finalVal == 0) {
+        //     finalVal = max;
+        // }
 
         return finalVal;
     };
 
     
 
-    console.log(wrapInRange(14, 12));
+    console.log(wrapInRange(5, 5));
     
     // check for and convert [-1 to 11, 0 to 12, 13 to 1, 14 to 2] (classes must be in i1-i12)
     const formatClassesArr = (arr) => {
@@ -187,8 +189,8 @@ function Projects(props) {
 
 
             <div className='project-title'>
-                {/* <h1>:{projectInfo.title}</h1> */}
-                <h1>:{wrapInRange(-2, 5)}</h1>
+                <h1>:{projectInfo.title}</h1>
+                {/* <h1>:{wrapInRange(-2, 5)}</h1> */}
             </div>
 
             <div className='spinner-container' onClick={(e) => {updateSpinner(e)}}>
