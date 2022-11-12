@@ -36,9 +36,7 @@ function Projects(props) {
     const [id, setId] = useState('s3');
     const [lastClass, setLastClass] = useState('i1');
     const [projectIndex, setProjectIndex] = useState(0);
-    const [projectInfo, setProjectInfo] = useState(projectDetails[projectIndex]);
-
-    // setProjectIndex(prev => wrapInRange((prev + 1), 5));
+    // const [projectInfo, setProjectInfo] = useState(projectDetails[projectIndex]);
 
     
 
@@ -129,16 +127,20 @@ function Projects(props) {
         // set a rotation amount based on how far away was clicked
         if (formattedCurrentId === '5') {
             rotationAmt -= 60;
+            setProjectIndex(prev => wrapInRange((prev + 2), 5));
         } 
         else if (formattedCurrentId === '4') {
             rotationAmt -= 30;
+            setProjectIndex(prev => wrapInRange((prev + 1), 5));
         } 
         // note: case (formattedCurrentId === 3) is already handled above
         else if (formattedCurrentId === '2') {
             rotationAmt += 30;
+            setProjectIndex(prev => wrapInRange((prev - 1), 5));
         } 
         else if (formattedCurrentId === '1') {
             rotationAmt += 60;
+            setProjectIndex(prev => wrapInRange((prev - 2), 5));
         }
 
         
@@ -189,7 +191,8 @@ function Projects(props) {
 
 
             <div className='project-title'>
-                <h1>:{projectInfo.title}</h1>
+                {/* <h1>:{projectInfo.title}</h1> */}
+                <h1>:{projectDetails[projectIndex].title}</h1>
                 {/* <h1>:{wrapInRange(-2, 5)}</h1> */}
             </div>
 
