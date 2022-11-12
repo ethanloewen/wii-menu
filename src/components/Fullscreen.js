@@ -1,7 +1,9 @@
 import './Fullscreen.scss';
+import { useEffect, useState } from 'react';
 import Projects from './channels/Projects.js';
 
 function Fullscreen(props) {
+  const [startLink, setStartLink] = useState('');
 
   return (
     <div id='fullscreen-main'>
