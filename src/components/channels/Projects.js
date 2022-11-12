@@ -44,15 +44,33 @@ function Projects(props) {
     const iconSize = '3x';
     const focusIconSize = '4x';
 
+    // // modulo function (default '%' not behaving as needed in js)
+    // function mod(n, m) {
+    //     return ((n % m) + m) % m;
+    // }
+
     // NEW function to wrap negatives (might replace formatClassesArr as a more generic ver.)
+        //n is number to be wrapped, m is maximum value allowed, ind is the index (0 by default) 
     const wrapInRange = (n, m) => {
         const num = n;
         const max = m;
 
-        const wrappedValue = num % max;
+        let finalVal = (num) % max;
 
-        return wrappedValue;
+        if (finalVal < 0) {
+            finalVal += max;
+        }
+
+        if (finalVal == 0) {
+            finalVal = max;
+        }
+
+        return finalVal;
     };
+
+    
+
+    console.log(wrapInRange(14, 12));
     
     // check for and convert [-1 to 11, 0 to 12, 13 to 1, 14 to 2] (classes must be in i1-i12)
     const formatClassesArr = (arr) => {
@@ -130,6 +148,13 @@ function Projects(props) {
 
         let classesToUpdate = [];
 
+        // classesToUpdate[0] = wrapInRange((formattedCurrentClass - 2), 12);
+        // classesToUpdate[1] = wrapInRange((formattedCurrentClass - 1), 12);
+        // classesToUpdate[2] = wrapInRange((formattedCurrentClass + 1), 12);
+        // classesToUpdate[3] = wrapInRange((formattedCurrentClass + 2), 12);
+        // console.log('NEW before', classesToUpdate);
+
+
         classesToUpdate[0] = formattedCurrentClass - 2;
         classesToUpdate[1] = formattedCurrentClass - 1;
         classesToUpdate[2] = formattedCurrentClass + 1;
@@ -137,6 +162,8 @@ function Projects(props) {
 
         // use the formatClassesArr() function to normalize the unwanted values
         const finalFormatted = formatClassesArr(classesToUpdate);
+        console.log('OLD after', finalFormatted);
+        // for (const )
 
         // add relevant id to new 'hitbox' classes
         for (let i = 0; i < 4; i++) {
@@ -160,8 +187,8 @@ function Projects(props) {
 
 
             <div className='project-title'>
-                <h1>:{projectInfo.title}</h1>
-                {/* <h1>:{wrapInRange()}</h1> */}
+                {/* <h1>:{projectInfo.title}</h1> */}
+                <h1>:{wrapInRange(-2, 5)}</h1>
             </div>
 
             <div className='spinner-container' onClick={(e) => {updateSpinner(e)}}>
