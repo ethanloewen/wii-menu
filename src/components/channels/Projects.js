@@ -5,9 +5,6 @@ import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import $ from 'jquery';
 import { useEffect, useState } from 'react';
 
-
-
-
 function Projects(props) {
     const projectDetails = [
         {
@@ -129,7 +126,12 @@ function Projects(props) {
             setProjectIndex(prev => wrapInRange((prev - 2), 5));
         }
 
-        props.setStartLink(projectDetails[projectIndex].link);
+        // issue: link is being updated one cycle behind the correct one
+        console.log('proj details', projectDetails[projectIndex].link);
+        setTimeout(() => {
+            
+            props.setStartLink(projectDetails[projectIndex].link);
+        }, 1000);
         
         // set the transform to update the spinner's rotation
         $(`.spinner-container`).css('transform', `rotate(${rotationAmt}deg)`);
@@ -175,9 +177,7 @@ function Projects(props) {
 
 
             <div className='project-title'>
-                {/* <h1>:{projectInfo.title}</h1> */}
                 <h1>:{projectDetails[projectIndex].title}</h1>
-                {/* <h1>:{wrapInRange(-2, 5)}</h1> */}
             </div>
 
             <div className='spinner-container' onClick={(e) => {updateSpinner(e)}}>
