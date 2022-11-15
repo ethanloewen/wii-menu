@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFolderOpen } from '@fortawesome/free-regular-svg-icons';
 import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import $ from 'jquery';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function Projects(props) {
     const projectDetails = [

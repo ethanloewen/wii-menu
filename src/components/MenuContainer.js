@@ -1,6 +1,6 @@
 import './MenuContainer.scss';
 import Fullscreen from './Fullscreen';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import $ from "jquery";
 
 

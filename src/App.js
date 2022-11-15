@@ -1,6 +1,6 @@
 import './App.css';
 import MenuContainer from './components/MenuContainer';
-import {useEffect} from 'react';
+import { useEffect } from 'react';
 import $ from "jquery";
 
 function App() {
