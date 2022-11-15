@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <div id='pointer'>
-        <img src='/wii_pointer.png'/>
+        <img src='/wii_pointer.png' alt='wii_pointer'/>
       </div>
       <MenuContainer /> 
     </div>
