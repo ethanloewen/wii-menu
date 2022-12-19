@@ -21,7 +21,7 @@ function MenuContainer() {
     setTimeout(() => {
       $(`.anim-panel`).css('animation', `${e.target.id} 1.5s forwards`);
       $(`#fullscreen-main`).css('animation', 'fade-dark 1.5s forwards');
-      $(`.buttons button`).css('animation', 'text-grow 1.5s forwards');
+      $(`.buttons button`).css('animation', 'pointer-pause 1.5s forwards');
       $(`.panel-container`).css('animation', 'hide-panels 1.5s forwards');
     }, 10);
 
@@ -35,7 +35,7 @@ function MenuContainer() {
     setTimeout(() => {
       $(`.anim-panel`).css('animation', `${lastId}-reverse 1s forwards`);
       $(`#fullscreen-main`).css('animation', 'fade-light 1s forwards');
-      $(`.buttons button`).css('animation', 'text-shrink 1s forwards');
+      $(`.buttons button`).css('animation', 'pointer-pause 1s forwards');
       $(`.panel-container`).css('animation', 'show-panels 1s forwards');
     }, 10);
 

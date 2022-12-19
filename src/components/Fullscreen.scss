@@ -20,14 +20,17 @@
         align-items: center;
         justify-content: center;
 
-        height: 18.5%;
-        width: 18.8%;
+        // height: 18.5%;
+        // width: 18.8%;
+        width: 96%;
+        height: 90%;
+        transform: scale(0.195, 0.195);
 
-        margin-left: 10.4%;
-        margin-top: 6.5%;
+        margin-left: 32.15%;
+        margin-top: -13.5%;
 
         // opacity: 1;
-        // visibility: hidden;
+        // visibility: visible;
         
         .buttons-container {
             // visibility: hidden;
@@ -58,7 +61,7 @@
                     height: 50%;
                     border-radius: 125px;
                     border: 0.3rem solid rgb(12, 213, 249);
-                    font-size: 0.1rem;
+                    font-size: 3rem;
                 }
             }
         }

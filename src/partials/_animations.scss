@@ -38,30 +38,28 @@
     to {background: rgb(216, 216, 216);}
 }
 
-@keyframes text-grow {
-    0% {
-        font-size: 0px;
-        pointer-events: none;
-    }
-    10% {font-size: 0.5rem;}
-    90% {font-size: 3rem;}
-    99% {pointer-events: none;}
-    100% {
-        font-size: 3rem;
-        pointer-events: all;
-    }
-}
+// @keyframes text-grow {
+//     0% {
+//         font-size: 0px;
+//         pointer-events: none;
+//     }
+//     10% {font-size: 0.5rem;}
+//     90% {font-size: 3rem;}
+//     99% {pointer-events: none;}
+//     100% {
+//         font-size: 3rem;
+//         pointer-events: all;
+//     }
+// }
 
-@keyframes text-shrink {
+@keyframes pointer-pause {
     0% {
-        font-size: 3rem;
         pointer-events: none;
     }
-    10% {font-size: 3rem;}
-    90% {font-size: 0.5rem;}
-    99% {pointer-events: none;}
+    99% {
+        pointer-events: none;
+    }
     100% {
-        font-size: 0px;
         pointer-events: all;
     }
 }
