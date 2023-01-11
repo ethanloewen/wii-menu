@@ -46,7 +46,7 @@ function MenuContainer() {
     <section id='menu-main'>
       <div className='menu-main-container'>
         <div className='stretchy-wrapper'>
-          <div>
+          <div className='spacing'>
 
             <Fullscreen isFullscreen={isFullscreen} exitFullscreen={exitFullscreen} />
 

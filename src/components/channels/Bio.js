@@ -15,10 +15,6 @@ function Bio(props) {
             <div className='bio-text'>
                 <h1>Hi, I'm Ethan</h1>
                 <h2>A fullstack web developer from Canada</h2>
-                {/* <div className='wrapper'>
-                    <img src='/wii_button_v2.png' alt='ethan-mii' />
-                    <div className='circ'></div>
-                </div> */}
             </div>
         </div>
     );
