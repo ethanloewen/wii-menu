@@ -12,8 +12,8 @@ function Fullscreen(props) {
     <div id='fullscreen-main'>
       <div className='anim-panel'>
 
-        {/* <Projects setStartLink={setStartLink} /> */}
-        <Bio />
+        <Projects setStartLink={setStartLink} />
+        {/* <Bio /> */}
 
         <div className='buttons-container'>
           <div className='buttons'>

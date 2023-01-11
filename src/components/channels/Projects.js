@@ -180,7 +180,7 @@ function Projects(props) {
                 <h1>:{projectDetails[projectIndex].title}</h1>
             </div>
 
-            <div className='spinner-container' onClick={(e) => {updateSpinner(e)}}>
+            {/* <div className='spinner-container' onClick={(e) => {updateSpinner(e)}}>
 
                 <div className='spinner'>
                     <div className='i1 spin-item' id='s3'>
@@ -244,7 +244,7 @@ function Projects(props) {
                     </div>
                 </div>
                 
-            </div>
+            </div> */}
 
             <div className='panel-name'>
                 <h2>Projects</h2>
