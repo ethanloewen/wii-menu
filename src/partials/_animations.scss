@@ -117,3 +117,15 @@
     }
 }
 
+/* BIO animations */
+@keyframes sharpen-shadows-1 {
+    0% {
+        box-shadow: 0px 0px 100px 50px rgb(190, 226, 205);
+    }
+    100% {
+        box-shadow: 0px 0px 0px 0px rgb(190, 226, 205);
+    }
+}
+
+
+
