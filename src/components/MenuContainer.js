@@ -17,6 +17,13 @@ function MenuContainer() {
 
     toggleIsFullscreen();
 
+    // Bio page animations
+    $('.circ:nth-of-type(3)').css('animation', '2s ease-in 0s 1 forwards sharpen-shadows-1');
+    $('.circ:nth-of-type(2)').css('animation', '2s ease-in 0s 1 forwards sharpen-shadows-1');
+    $('.circ:nth-of-type(1)').css('animation', '2s ease-in 0s 1 forwards sharpen-shadows-2');
+
+
+
     // small timeout required to make the animation work properly
     setTimeout(() => {
       $(`.anim-panel`).css('animation', `${e.target.id} 1.5s forwards`);
@@ -30,6 +37,13 @@ function MenuContainer() {
   };
 
   const exitFullscreen = () => {
+
+    // Bio page animations
+    setTimeout(() => {
+      $('.circ:nth-of-type(3)').css('animation', 'none');
+      $('.circ:nth-of-type(2)').css('animation', 'none');
+      $('.circ:nth-of-type(1)').css('animation', 'none');
+    }, 1000);
 
     // small timeout required to make the animation work properly
     setTimeout(() => {
