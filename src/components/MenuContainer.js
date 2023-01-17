@@ -21,6 +21,11 @@ function MenuContainer() {
     $('.circ:nth-of-type(3)').css('animation', '1.5s ease-in 2.5s 1 forwards sharpen-shadows-1');
     $('.circ:nth-of-type(2)').css('animation', '1.5s ease-in 2.5s 1 forwards sharpen-shadows-1');
     $('.circ:nth-of-type(1)').css('animation', '1.5s ease-in 2.5s 1 forwards sharpen-shadows-2');
+    $('.bio-text h1').css('animation', 'title-typing 2.5s steps(13, end), blink-caret .8s step-end infinite');
+    $('.bio-text h2').css('animation', '2s ease-in 3s 1 forwards description-fade');
+    $('.links-section').css('animation', '2s ease-in 3s 1 forwards description-fade');
+
+
 
 
 

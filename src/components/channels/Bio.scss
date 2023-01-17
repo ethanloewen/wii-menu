@@ -83,20 +83,17 @@
             margin: 0;
             margin-top: 10%;
             margin-left: 40px;
-
             width: 62%;
-
-
-            
-            // border: 1px solid red;
             overflow: hidden;
             white-space: nowrap;
             letter-spacing: .1em;
             border-right: .1em solid rgb(46, 116, 73);
 
-            animation: 
-                title-typing 2.5s steps(13, end),
-                blink-caret .8s step-end infinite;
+            // animation-delay: 1000ms;
+
+            // animation: 
+            //     title-typing 2.5s steps(13, end),
+            //     blink-caret .8s step-end infinite;
         }
 
         
@@ -118,7 +115,7 @@
             // letter-spacing: .05em;
             // border-right: .1em solid rgb(46, 116, 73);
 
-            animation: 2s ease-in 3s 1 forwards description-fade;
+            // animation: 2s ease-in 3s 1 forwards description-fade;
             //     description-typing 3.5s steps(30, end),
             //     blink-caret .5s step-end infinite;
         }
@@ -133,6 +130,10 @@
     margin-left: 40px;
     justify-content: space-around;
     align-items: center;
+    opacity: 0;
+
+    // animation: 2s ease-in 3s 1 forwards description-fade;
+
 
     .resume {
         position: relative;
