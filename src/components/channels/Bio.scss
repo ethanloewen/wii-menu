@@ -103,7 +103,7 @@
 
         h2 {
             display: inline-block;
-            font-size: 22px;
+            font-size: 1.5vw;
             padding: 0;
             margin: 0;
             margin-top: 10px;
@@ -121,6 +121,74 @@
             animation: 2s ease-in 3s 1 forwards description-fade;
             //     description-typing 3.5s steps(30, end),
             //     blink-caret .5s step-end infinite;
+        }
+    }
+}
+
+.links-section {
+    margin-top: 10px;
+    display: flex;
+    width: 60%;
+    height: 10vw;
+    margin-left: 40px;
+    justify-content: space-around;
+    align-items: center;
+
+    .resume {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // img {
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        // }
+    }
+
+    // i {
+    //     border: 1px solid red;
+    //     width: 100px;
+    //     height: 100px;
+    // }
+}
+
+// #external-links {
+//     position: relative;
+// }
+
+#link-details {
+    margin-top: -10vw;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .drawn-circ {
+        position: relative;
+        top: 0; left: 0;
+        width: 35%;
+        height: auto;
+    }
+
+    .drawn-arrow {
+        position: absolute;
+        width: 18%;
+        height: auto;
+        top: 80%;
+        left: 50%;
+        transform: rotate(-110deg);
+    }
+
+    .resume-text {
+        position: absolute;
+        top: 115%;
+        left: 70%;
+        font-size: 1.1vw;
+
+        p {
+            margin: 0;
+            padding: 0;
         }
     }
 }
