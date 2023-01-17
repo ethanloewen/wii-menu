@@ -76,22 +76,51 @@
         display: block !important;
 
         h1 {
+            display: inline-block;
             position: relative;
-            font-size: 55px;
+            font-size: 4vw;
             padding: 0;
             margin: 0;
             margin-top: 10%;
             margin-left: 40px;
+
+            width: 62%;
+
+
+            
             // border: 1px solid red;
+            overflow: hidden;
+            white-space: nowrap;
+            letter-spacing: .1em;
+            border-right: .1em solid rgb(46, 116, 73);
+
+            animation: 
+                title-typing 2.5s steps(13, end),
+                blink-caret .8s step-end infinite;
         }
 
+        
+
         h2 {
+            display: inline-block;
             font-size: 22px;
             padding: 0;
             margin: 0;
             margin-top: 10px;
             margin-left: 40px;
-            // border: 1px solid red;
+            opacity: 0;
+
+            // width: 74%;
+
+            // // border: 1px solid red;
+            // overflow: hidden;
+            // white-space: nowrap;
+            // letter-spacing: .05em;
+            // border-right: .1em solid rgb(46, 116, 73);
+
+            animation: 2s ease-in 3s 1 forwards description-fade;
+            //     description-typing 3.5s steps(30, end),
+            //     blink-caret .5s step-end infinite;
         }
     }
 }

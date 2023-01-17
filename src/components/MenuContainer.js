@@ -18,9 +18,9 @@ function MenuContainer() {
     toggleIsFullscreen();
 
     // Bio page animations
-    $('.circ:nth-of-type(3)').css('animation', '2s ease-in 0s 1 forwards sharpen-shadows-1');
-    $('.circ:nth-of-type(2)').css('animation', '2s ease-in 0s 1 forwards sharpen-shadows-1');
-    $('.circ:nth-of-type(1)').css('animation', '2s ease-in 0s 1 forwards sharpen-shadows-2');
+    $('.circ:nth-of-type(3)').css('animation', '1.5s ease-in 2.5s 1 forwards sharpen-shadows-1');
+    $('.circ:nth-of-type(2)').css('animation', '1.5s ease-in 2.5s 1 forwards sharpen-shadows-1');
+    $('.circ:nth-of-type(1)').css('animation', '1.5s ease-in 2.5s 1 forwards sharpen-shadows-2');
 
 
 
