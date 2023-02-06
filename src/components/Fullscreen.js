@@ -2,6 +2,8 @@ import './Fullscreen.scss';
 import { useState } from 'react';
 import Projects from './channels/Projects.js';
 import Bio from './channels/Bio.js';
+import Tech from './channels/Tech.js';
+
 
 function Fullscreen(props) {
   const [startLink, setStartLink] = useState('startlink');
@@ -13,7 +15,8 @@ function Fullscreen(props) {
       <div className='anim-panel'>
 
         {/* <Projects setStartLink={setStartLink} /> */}
-        <Bio /> 
+        {/* <Bio />  */}
+        <Tech />
 
         <div className='buttons-container'>
           <div className='buttons'>
