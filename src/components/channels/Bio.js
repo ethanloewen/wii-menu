@@ -1,10 +1,10 @@
 import './Bio.scss';
 import $ from 'jquery';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Bio(props) {
-
-
+    const [bioTitle, setBioTitle] = useState('');
+    const titleText = "Hi, I'm Ethan";
 
     return (
         <div id='bio-main'>
