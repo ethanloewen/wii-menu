@@ -66,26 +66,50 @@
             transform-origin: center center 0px;
             transition: all .5s ease-out;
             position: relative;
-            // transform: perspective(1000px) rotateX(35deg) rotateY(4deg) rotateZ(-30deg);
+            transform: perspective(1000px) rotateX(35deg) rotateY(4deg) rotateZ(-30deg);
 
-            h2 {
-                margin: 0;
-                padding: 5% 5%;
-                font-size: 1.8rem;
+            .suit-wrapper:nth-of-type(1) {
+                width: 22%;
+                padding-top: 5%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 position: absolute;
-            }
-
-            h2:nth-of-type(1) {
                 top: 0;
                 left: 0;
+
+                h2, .icon {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 1.8rem;
+                }
+
+                h2 {
+                    font-family: 'Rubik Mono One', sans-serif;
+                }
             }
 
-            h2:nth-of-type(2) {
+            .suit-wrapper:nth-of-type(2) {
+                width: 22%;
+                padding-top: 5%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
                 bottom: 0;
                 right: 0;
                 transform: rotate(180deg);
-            }
 
+                h2, .icon {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 1.8rem;
+                }
+
+                h2 {
+                    font-family: 'Rubik Mono One', sans-serif;
+                }
+            }
         }
 
         .card:hover {
@@ -93,6 +117,8 @@
             height: 80%;
             width: 24%;
             background-color: rgba(240, 240, 240, 1);
+
+
         }
     }
 }
