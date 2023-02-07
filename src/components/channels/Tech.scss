@@ -74,12 +74,8 @@
                 height: 60%;
                 position: absolute;
                 top: 20%;
-                border: 1px solid red;
-                // display: flex;
-                // justify-content: space-around;
+                border: 1px solid rgb(32, 80, 183);
                 display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(3, 1fr);
                 grid-column-gap: 0px;
                 grid-row-gap: 0px;
 
@@ -104,6 +100,45 @@
                         top: auto;
                         left: auto;
                     }
+                }
+            }
+
+            // first card
+            .c1 {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+
+            // second card
+            .c2 {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+
+                
+                .icon-group i {
+                    font-size: 3.5rem;
+                }
+            }
+
+            // third card
+            .c3 {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(1, 1fr);
+
+                
+                .icon-group i {
+                    font-size: 5rem;
+                }
+            }
+
+            // fourth card
+            .c4 {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+
+                
+                .icon-group i {
+                    font-size: 5rem;
                 }
             }
 
