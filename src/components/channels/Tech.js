@@ -15,7 +15,7 @@ function Tech(props) {
 
             <div className='cards-container'>
                 <div className='card'>
-                
+
                     <div className='suit-wrapper'>
                         <h2>A</h2>
                         <FontAwesomeIcon className='icon' icon={faLanguage} />
@@ -24,6 +24,39 @@ function Tech(props) {
                     <div className='suit-wrapper'>
                         <h2>A</h2>
                         <FontAwesomeIcon className='icon' icon={faLanguage} />
+                    </div>
+
+                    <div className='card-body'>
+                        <div className='icon-group'>
+                            <i class="devicon-html5-plain"></i>
+                            <p>HTML</p>
+                        </div>
+
+                        <div className='icon-group'>
+                            <i class="devicon-css3-plain"></i>
+                            <p>CSS</p>
+                        </div>
+
+                        <div className='icon-group'>
+                            <i class="devicon-javascript-plain"></i>
+                            <p>Javascript</p>
+                        </div>
+
+                        <div className='icon-group'>
+                            <i class="devicon-java-plain"></i>
+                            <p>Java</p>
+                        </div>
+
+                        <div className='icon-group'>
+                            <i class="devicon-ruby-plain"></i>
+                            <p>Ruby</p>
+                        </div>
+
+                        <div className='icon-group'>
+                            <img src='/sql-server.png' />
+                            <p>SQL</p>
+                        </div>
+
                     </div>
 
                     <h3>Languages</h3>
