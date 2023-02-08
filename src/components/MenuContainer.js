@@ -1,6 +1,6 @@
 import './MenuContainer.scss';
 import Fullscreen from './Fullscreen';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import $ from "jquery";
 
 
@@ -61,6 +61,61 @@ function MenuContainer() {
     toggleIsFullscreen();
   };
 
+  const getDate = () => {
+    const date = new Date();
+    const day = date.getDate();
+    const dayOfWeek = date.getDay();
+    const month = date.getMonth() + 1;
+
+    let dayString = '';
+
+    switch(dayOfWeek) {
+      case 1:
+        dayString = 'Mon';
+        break;
+      case 2:
+        dayString = 'Tue';
+        break;
+      case 3:
+        dayString = 'Wed';
+        break;
+      case 4:
+        dayString = 'Thu';
+        break;
+      case 5:
+        dayString = 'Fri';
+        break;
+      case 6:
+        dayString = 'Sat';
+        break;
+      case 7:
+        dayString = 'Sun';
+        break;
+    }
+
+    const formattedDate = `${dayString} ${month}/${day}`;
+
+    return formattedDate;
+  };
+
+  const getTime = () => {
+    const date = new Date();
+    const time = date.toLocaleTimeString('en-US', {hour12: false});
+    const formattedTime = time.slice(0, 5);
+
+    return formattedTime;
+  }
+
+  const [timeState, setTimeState] = useState(getTime());
+  const [dateState, setDateState] = useState(getDate());
+
+  // update date & time
+  useEffect(() => {
+    setInterval(() => {setTimeState(getTime());}, 1000);
+    setInterval(() => {setDateState(getDate());}, 60000);
+  }, [timeState, dateState]);
+  
+
   return (
     <section id='menu-main'>
       <div className='menu-main-container'>
@@ -96,8 +151,8 @@ function MenuContainer() {
 
               <div id='clock'>
                 <div className='clock-main'>
-                    <h1 id='time'>22:00</h1>
-                    <h2 id='date'>Fri 22/01</h2>
+                    <h1 id='time'>{timeState}</h1>
+                    <h2 id='date'>{dateState}</h2>
                 </div>
               </div>
 

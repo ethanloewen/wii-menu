@@ -12,13 +12,16 @@ $hudheight: 25%;
     
     .menu-main-container {
         width: 80%;
+        border: 1px solid red;
     
         .stretchy-wrapper {
             width: 100%;
             padding-bottom: 56.25%; /* 16:9 */
             position: relative;
         
-            background: rgb(216, 216, 216);
+            // background: rgb(216, 216, 216);
+            background: repeating-linear-gradient(rgb(216, 216, 216), rgb(216, 216, 216) 2px, rgb(225, 225, 225) 2px, rgb(225, 225, 225) 6px);
+
     
             .spacing {
                 position: absolute;
@@ -91,7 +94,7 @@ $hudheight: 25%;
                     position: absolute;
                     display: flex;
                     // border: 1px solid red;
-                    background-image: url('../../public/menu_footer_v1.png');
+                    background-image: url('../../public/menu_footer_v2.png');
                     background-size: contain;
                     
                     .hud {
@@ -196,7 +199,7 @@ $hudheight: 25%;
 // note parent div has {display: flex};
 #clock {
 
-    visibility: hidden; // Temporarily Hidden
+    // visibility: hidden; // Temporarily Hidden
     position: absolute;
     z-index: 99;
     width: 100%;
@@ -204,32 +207,28 @@ $hudheight: 25%;
 
     .clock-main {
 
-        position: absoulte;
+        position: relative;
         width: 100%;
-        padding-bottom: 56.25%; //16:9 aspect ratio
-        height: 0;
+        height: 100%;
         display: flex;
         flex-direction: column;
-        // justify-content: center;
         align-items: center;
-        
-
+        color: rgb(86, 86, 86);
         z-index: 50;
 
         #time {
-
-            margin: 0;
-            margin-top: 40%;//accounts for main using padding-bottom instead of height
-            border: 1px solid red;
+            font-family: 'Roboto Mono', monospace;
+            position: absolute;
+            bottom: 10%;
             font-size: 6rem;
         }
 
         #date {
-            
+            font-family: 'Heebo', sans-serif;
+            position: absolute;
+            bottom: 7.5%;
             margin: 0;
-            margin-top: 3%;
-            font-size: 5rem;
-            border: 1px solid red;
+            font-size: 4rem;
         }
     }
 }
