@@ -6,6 +6,36 @@ function Bio(props) {
     const [bioTitle, setBioTitle] = useState('');
     const titleText = "Hi, I'm Ethan";
 
+    const updateTitle = props.updateTitle;
+
+    const loadTitle = () => {
+        let displayTitle = '';
+        for (let i = 0; i < titleText.length; i++) {
+            setTimeout(() => {
+                displayTitle += titleText.charAt(i);
+                setBioTitle(displayTitle);
+                // console.log(titleText.charAt(i));
+                // await setBioTitle(displayTitle);
+            }, i * 250);
+        }
+    };
+
+    // loadTitle();
+
+    // console.log(loadTitle());
+
+    useEffect(() => {
+        console.log('use effect ran');
+        if (updateTitle) {
+            console.log('title updating');
+            loadTitle();
+        }
+    }, [updateTitle]);
+
+    // useEffect(() => {
+    //     console.log()
+    // })
+
     return (
         <div id='bio-main'>
             <div className='img-wrap'>
@@ -15,7 +45,7 @@ function Bio(props) {
                 <div className='circ'></div>
             </div>
             <div className='bio-text'>
-                <h1>Hi, I'm Ethan</h1>
+                <h1>{bioTitle}</h1>
                 <h2>A fullstack web developer from Canada</h2>
                 <div className='links-section' id='external-links'>
                     <div className='icon'>

@@ -8,6 +8,10 @@ import $ from "jquery";
 function MenuContainer() {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [lastId, setLastId] = useState('');
+  const [currentPanel, setCurrentPanel] = useState(0);
+
+  // state for Bio component
+  const [updateTitle, setUpdateTitle] = useState(false);
 
   const toggleIsFullscreen = () => {
     setIsFullscreen(current => !current);
@@ -21,9 +25,9 @@ function MenuContainer() {
     $('.circ:nth-of-type(3)').css('animation', '1.5s ease-in 2.5s 1 forwards sharpen-shadows-1');
     $('.circ:nth-of-type(2)').css('animation', '1.5s ease-in 2.5s 1 forwards sharpen-shadows-1');
     $('.circ:nth-of-type(1)').css('animation', '1.5s ease-in 2.5s 1 forwards sharpen-shadows-2');
-    $('.bio-text h1').css('animation', 'title-typing 2.5s steps(13, end), blink-caret .8s step-end infinite');
-    $('.bio-text h2').css('animation', '2s ease-in 3s 1 forwards description-fade');
-    $('.links-section').css('animation', '2s ease-in 3s 1 forwards description-fade');
+    // $('.bio-text h1').css('animation', 'title-typing 2.5s steps(13, end), blink-caret .8s step-end infinite');
+    // $('.bio-text h2').css('animation', '2s ease-in 3s 1 forwards description-fade');
+    // $('.links-section').css('animation', '2s ease-in 3s 1 forwards description-fade');
 
 
 
@@ -49,6 +53,9 @@ function MenuContainer() {
       $('.circ:nth-of-type(2)').css('animation', 'none');
       $('.circ:nth-of-type(1)').css('animation', 'none');
     }, 1000);
+
+    console.log('setUpdateTitle = false')
+    setUpdateTitle(false);
 
     // small timeout required to make the animation work properly
     setTimeout(() => {
@@ -122,14 +129,14 @@ function MenuContainer() {
         <div className='stretchy-wrapper'>
           <div className='spacing'>
 
-            <Fullscreen isFullscreen={isFullscreen} exitFullscreen={exitFullscreen} />
+            <Fullscreen isFullscreen={isFullscreen} exitFullscreen={exitFullscreen} currentPanel={currentPanel} updateTitle={updateTitle} />
 
             <div className='panel-container'>
               <div className='panels' onClick={(e) => {enterFullscreen(e)}}>
                 <div className='p-row'>
-                  <div className='panel' id='p1' ></div>
-                  <div className='panel' id='p2'></div>
-                  <div className='panel' id='p3'></div>
+                  <div className='panel' id='p1' onClick={() => {setCurrentPanel(1); setUpdateTitle(true);}}></div>
+                  <div className='panel' id='p2' onClick={() => {setCurrentPanel(2)}}></div>
+                  <div className='panel' id='p3' onClick={() => {setCurrentPanel(3)}}></div>
                   <div className='panel' id='p4'></div>
                 </div>
                 <div className='p-row'>

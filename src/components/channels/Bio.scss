@@ -83,7 +83,7 @@
             margin: 0;
             margin-top: 10%;
             margin-left: 40px;
-            width: 62%;
+            // width: 62%;
             overflow: hidden;
             white-space: nowrap;
             letter-spacing: .1em;
@@ -99,13 +99,13 @@
         
 
         h2 {
-            display: inline-block;
+            display: block;
             font-size: 1.5vw;
             padding: 0;
             margin: 0;
             margin-top: 10px;
             margin-left: 40px;
-            opacity: 0;
+            // opacity: 0;
 
             // width: 74%;
 
@@ -130,7 +130,7 @@
     margin-left: 40px;
     justify-content: space-around;
     align-items: center;
-    opacity: 0;
+    // opacity: 0;
     z-index: 10;
 
     // animation: 2s ease-in 3s 1 forwards description-fade;
